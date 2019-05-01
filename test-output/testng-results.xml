@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="3124" started-at="2019-05-01T17:01:18Z" finished-at="2019-05-01T17:01:21Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="3124" started-at="2019-05-01T17:01:18Z" finished-at="2019-05-01T17:01:21Z">
+      <class name="com.madhub.demo.codingTest.TC1_GetServiceTest">
+        <test-method status="PASS" signature="initialization()[pri:0, instance:com.madhub.demo.codingTest.TC1_GetServiceTest@2c8d66b2]" name="initialization" is-config="true" duration-ms="454" started-at="2019-05-01T22:31:18Z" finished-at="2019-05-01T22:31:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method status="PASS" signature="testGetService()[pri:0, instance:com.madhub.demo.codingTest.TC1_GetServiceTest@2c8d66b2]" name="testGetService" duration-ms="2659" started-at="2019-05-01T22:31:19Z" finished-at="2019-05-01T22:31:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetService -->
+      </class> <!-- com.madhub.demo.codingTest.TC1_GetServiceTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
