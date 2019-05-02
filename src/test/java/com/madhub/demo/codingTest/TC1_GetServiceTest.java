@@ -13,33 +13,73 @@
  */
 package com.madhub.demo.codingTest;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import core.TestBase;
+import core.RestAssuredConfigurationBase;
 import io.restassured.RestAssured;
+import io.restassured.module.jsv.JsonSchemaValidator;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import junit.framework.Assert;
+import utils.TestUtils;
 
-public class TC1_GetServiceTest extends TestBase
+public class TC1_GetServiceTest extends RestAssuredConfigurationBase
 {
+    public static Logger log = LogManager.getLogger(RestAssuredConfigurationBase.class.getName());
+
     @BeforeTest
     public static void initialization()
     {
-        RestAssured.baseURI = TestBase.initBaseURI();
+        RestAssured.baseURI = RestAssuredConfigurationBase.initBaseURI();
     }
 
     @Test
     public static void testGetService()
     {
-        RequestSpecification request = RestAssured.given();
-        request.header("Content-Type", "application/json");
-        request.header("charset", "UTF-8");
+        RequestSpecification request = new RestAssuredConfigurationBase().getRequestSpecification();
+        /* request.header("Content-Type", "application/json");
+        request.header("charset", "UTF-8");*/
         Response res = request.get(Resource.readGetServiceResource());
-        int statusCode = res.getStatusCode();
-        String body = res.getBody().asString();
-        Assert.assertEquals(200, statusCode);
+        if (res != null)
+        {
+            //Validate the Response statuscode
+            try
+            {
+                Assert.assertEquals(200, res.getStatusCode());
+                System.out.println("Received Status Code = " + res.getStatusCode() + ". Matches the Expected.");
+                TC1_GetServiceTest.log
+                    .info("Received Status Code = " + res.getStatusCode() + ". Matches the Expected.");
+            }
+            catch (Throwable t)
+            {
+                System.out.println("Expected Status Code is 200, Received Status Code is " + res.getStatusCode());
+                Assert.assertTrue(false);
+            }
+
+            //Validate the Response Schema
+            res.then().assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("JsonSchemaFullList.json"));
+
+            //Validate the Response records count
+            JsonPath js = TestUtils.rawToJson(res);
+            int recordCount = js.get("$.size()");
+            if (recordCount < 100)
+            {
+                System.out.println("Expected Record count is >= 100, but received Record count is " + recordCount);
+
+                Assert.assertTrue(false);
+            }
+            else
+            {
+                System.out
+                    .println("Received Record count is = " + recordCount + ". Matches the Expectation of >= 100 ");
+                Assert.assertTrue(true);
+            }
+
+        }
 
     }
 }

@@ -18,6 +18,7 @@ public class Resource
     public static String readGetServiceResource()
     {
         String resource = "/posts";
+        //String resource = "123";
         return resource;
     }
 
