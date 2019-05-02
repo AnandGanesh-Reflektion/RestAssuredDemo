@@ -27,4 +27,10 @@ public class Constants
 
     public static final boolean BOOLEAN_FALSE = false;
 
+    public static final int GET_STATUS_CODE = 200;
+
+    public static final int POST_STATUS_CODE = 201;
+
+    public static final int ERROR_STATUS_CODE = 404;
+
 }

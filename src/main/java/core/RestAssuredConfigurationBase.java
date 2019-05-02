@@ -13,45 +13,26 @@
  */
 package core;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import constants.Config;
 import io.restassured.RestAssured;
-import io.restassured.specification.RequestSpecification;
 import utils.PropertiesUtility;
 
 public class RestAssuredConfigurationBase
 {
-    public static String initBaseURI()
+    public static Logger log = LogManager.getLogger(RestAssuredConfigurationBase.class.getName());
+
+    // public static String baseURI = null;
+
+    public static void initBaseURI()
     {
-        //  FileInputStream fis = new FileInputStream("C:\\");
         String protocol = PropertiesUtility.readProperty(Config.PROTOCOL);
         String host = PropertiesUtility.readProperty(Config.HOST);
-        String baseURI = protocol + "://" + host;
-        return baseURI;
-    }
+        //  RestAssuredConfigurationBase.baseURI = protocol + "://" + host;
+        RestAssured.baseURI = protocol + "://" + host;
 
-    private String contentTypeHeaderKey;
-
-    private String contentTypeHeaderValue;
-
-    private String charsetHeaderKey;
-
-    private String charsetHeaderValue;
-
-    public RestAssuredConfigurationBase()
-    {
-        this.contentTypeHeaderKey = "Content-Type";
-        this.contentTypeHeaderValue = "application/json";
-        this.charsetHeaderKey = "charset";
-        this.charsetHeaderValue = "UTF-8";
-    }
-
-    public RequestSpecification getRequestSpecification()
-    {
-        RequestSpecification request = RestAssured.given();
-
-        request.header(this.contentTypeHeaderKey, this.contentTypeHeaderValue);
-        request.header(this.charsetHeaderKey, this.charsetHeaderValue);
-        return request;
     }
 
 }

@@ -9,8 +9,6 @@
     <classes>
       <class name="com.madhub.demo.codingTest.TC1_GetServiceTest"/>
       <class name="com.madhub.demo.codingTest.TC2_GetServiceTestSingleRecord"/>
-      <class name="com.madhub.demo.codingTest.TC3_GetServiceInvalidResource"/>
-      <class name="com.madhub.demo.codingTest.TC4_PostServiceTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

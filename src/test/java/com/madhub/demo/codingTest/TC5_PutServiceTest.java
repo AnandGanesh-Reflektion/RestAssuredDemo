@@ -1,7 +1,7 @@
 /*
- * Class: TC1_GetServiceTests
+ * Class: TC5_PutServiceTest
  *
- * Created on May 1, 2019
+ * Created on May 3, 2019
  *
  * (c) Copyright Lam Research Corporation, unpublished work, created 2019
  * All use, disclosure, and/or reproduction of this material is prohibited
@@ -13,39 +13,21 @@
  */
 package com.madhub.demo.codingTest;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import constants.Config;
-import constants.Constants;
 import core.ResponseValidators;
 import core.RestAssuredConfigurationBase;
 import core.RestAssuredHelpers;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class TC1_GetServiceTest extends RestAssuredConfigurationBase
+public class TC5_PutServiceTest
 {
-    public static Logger log = LogManager.getLogger(TC1_GetServiceTest.class.getName());
-
     RestAssuredHelpers restHelpers = new RestAssuredHelpers();
 
     ResponseValidators responseValidator = new ResponseValidators();
-
-    @Test
-    public void GETServiceTest()
-    {
-        TC1_GetServiceTest.log.info("Test Specification:\n BaseURI = " + RestAssured.baseURI);
-
-        RequestSpecification request = this.restHelpers.getRequestSpecification(Config.GET, null);
-        Response response = this.restHelpers.getResponse(Config.GET, request, Resource.readGetServiceResource(null));
-
-        this.responseValidator.validateGetResponse(response, Constants.GET_STATUS_CODE, "JsonSchemaFullList.json", 100);
-
-    }
 
     @BeforeTest
     public void initialization()
@@ -53,4 +35,16 @@ public class TC1_GetServiceTest extends RestAssuredConfigurationBase
         RestAssuredConfigurationBase.initBaseURI();
 
     }
+
+    @Test
+    public void PUTServiceTest()
+    {
+        String input = "1";
+        RequestSpecification request = this.restHelpers.getRequestSpecification(Config.PUT, Payload.putPayload());
+        Response response = this.restHelpers.getResponse(Config.PUT, request, Resource.readGetServiceResource(input));
+        System.out.println(response.asString());
+        /* this.responseValidator
+            .validateGetResponse(response, Constants.GET_STATUS_CODE, "JsonSchemaSingleRecord.json", -1);*/
+    }
+
 }

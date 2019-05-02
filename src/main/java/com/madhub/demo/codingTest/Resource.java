@@ -15,10 +15,25 @@ package com.madhub.demo.codingTest;
 
 public class Resource
 {
-    public static String readGetServiceResource()
+    public static String readGetServiceInvalidResource()
     {
-        String resource = "/posts";
-        //String resource = "123";
+        String resource = "/invalidposts";
+        return resource;
+    }
+
+    public static String readGetServiceResource(String input)
+    {
+        String resource;
+
+        if (input == null)
+        {
+            resource = "/posts";
+            //return resource;
+        }
+        else
+        {
+            resource = "/posts/" + input;
+        }
         return resource;
     }
 

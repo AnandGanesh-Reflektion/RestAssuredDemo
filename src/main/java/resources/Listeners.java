@@ -44,6 +44,10 @@ public class Listeners implements ITestListener
     public void onTestFailure(ITestResult result)
     {
         // TODO Auto-generated method stub
+        Listeners.log.info("======================================================");
+        Listeners.log.info("Failed Test Case: [" + result.getName() + "]");
+        Listeners.log.info("======================================================");
+
     }
 
     public void onTestSkipped(ITestResult arg0)
@@ -52,16 +56,21 @@ public class Listeners implements ITestListener
 
     }
 
-    public void onTestStart(ITestResult arg0)
+    public void onTestStart(ITestResult result)
     {
         // TODO Auto-generated methodstub
+        Listeners.log.info("======================================================");
+        Listeners.log.info("Begin Test Case: [" + result.getName() + "]");
+        Listeners.log.info("======================================================");
 
     }
 
-    public void onTestSuccess(ITestResult arg0)
+    public void onTestSuccess(ITestResult result)
     {
         // TODO Auto-generated method stub
-
+        Listeners.log.info("======================================================");
+        Listeners.log.info("Passed Test Case: [" + result.getName() + "]");
+        Listeners.log.info("======================================================");
     }
 
 }

@@ -1,7 +1,7 @@
 /*
- * Class: TC1_GetServiceTests
+ * Class: TC3_GetServiceInvalidResource
  *
- * Created on May 1, 2019
+ * Created on May 3, 2019
  *
  * (c) Copyright Lam Research Corporation, unpublished work, created 2019
  * All use, disclosure, and/or reproduction of this material is prohibited
@@ -19,32 +19,26 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import constants.Config;
-import constants.Constants;
 import core.ResponseValidators;
 import core.RestAssuredConfigurationBase;
 import core.RestAssuredHelpers;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class TC1_GetServiceTest extends RestAssuredConfigurationBase
+public class TC3_GetServiceInvalidResource
 {
-    public static Logger log = LogManager.getLogger(TC1_GetServiceTest.class.getName());
+    public static Logger log = LogManager.getLogger(TC3_GetServiceInvalidResource.class.getName());
 
     RestAssuredHelpers restHelpers = new RestAssuredHelpers();
 
     ResponseValidators responseValidator = new ResponseValidators();
 
     @Test
-    public void GETServiceTest()
+    public void GETServiceWithInvalidResource()
     {
-        TC1_GetServiceTest.log.info("Test Specification:\n BaseURI = " + RestAssured.baseURI);
-
         RequestSpecification request = this.restHelpers.getRequestSpecification(Config.GET, null);
-        Response response = this.restHelpers.getResponse(Config.GET, request, Resource.readGetServiceResource(null));
-
-        this.responseValidator.validateGetResponse(response, Constants.GET_STATUS_CODE, "JsonSchemaFullList.json", 100);
-
+        Response response = this.restHelpers.getResponse(Config.GET, request, Resource.readGetServiceInvalidResource());
+        this.responseValidator.validateGetResponse(response, 404, null, -1);
     }
 
     @BeforeTest

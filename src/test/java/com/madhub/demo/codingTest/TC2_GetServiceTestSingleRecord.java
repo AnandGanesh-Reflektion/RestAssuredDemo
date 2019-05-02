@@ -1,7 +1,7 @@
 /*
- * Class: TC1_GetServiceTests
+ * Class: TC2_GetServiceTestSingleRecord
  *
- * Created on May 1, 2019
+ * Created on May 2, 2019
  *
  * (c) Copyright Lam Research Corporation, unpublished work, created 2019
  * All use, disclosure, and/or reproduction of this material is prohibited
@@ -23,27 +23,26 @@ import constants.Constants;
 import core.ResponseValidators;
 import core.RestAssuredConfigurationBase;
 import core.RestAssuredHelpers;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class TC1_GetServiceTest extends RestAssuredConfigurationBase
+public class TC2_GetServiceTestSingleRecord
 {
-    public static Logger log = LogManager.getLogger(TC1_GetServiceTest.class.getName());
+    public static Logger log = LogManager.getLogger(TC2_GetServiceTestSingleRecord.class.getName());
 
     RestAssuredHelpers restHelpers = new RestAssuredHelpers();
 
     ResponseValidators responseValidator = new ResponseValidators();
 
     @Test
-    public void GETServiceTest()
+    public void GETServiceTestSingleRecord()
     {
-        TC1_GetServiceTest.log.info("Test Specification:\n BaseURI = " + RestAssured.baseURI);
-
+        String input = "1";
         RequestSpecification request = this.restHelpers.getRequestSpecification(Config.GET, null);
-        Response response = this.restHelpers.getResponse(Config.GET, request, Resource.readGetServiceResource(null));
-
-        this.responseValidator.validateGetResponse(response, Constants.GET_STATUS_CODE, "JsonSchemaFullList.json", 100);
+        Response response = this.restHelpers.getResponse(Config.GET, request, Resource.readGetServiceResource(input));
+        System.out.println(response.getBody().asString());
+        this.responseValidator
+            .validateGetResponse(response, Constants.GET_STATUS_CODE, "JsonSchemaSingleRecord.json", "id", input);
 
     }
 
@@ -53,4 +52,5 @@ public class TC1_GetServiceTest extends RestAssuredConfigurationBase
         RestAssuredConfigurationBase.initBaseURI();
 
     }
+
 }
