@@ -2,20 +2,25 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="591" started-at="2019-05-02T20:44:24Z" finished-at="2019-05-02T20:44:25Z">
+  <suite name="Suite" duration-ms="2257" started-at="2019-05-03T03:58:00Z" finished-at="2019-05-03T03:58:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="591" started-at="2019-05-02T20:44:24Z" finished-at="2019-05-02T20:44:25Z">
-      <class name="com.madhub.demo.codingTest.TC5_PutServiceTest">
-        <test-method status="PASS" signature="initialization()[pri:0, instance:com.madhub.demo.codingTest.TC5_PutServiceTest@70e8f8e]" name="initialization" is-config="true" duration-ms="390" started-at="2019-05-03T02:14:24Z" finished-at="2019-05-03T02:14:25Z">
+    <test name="Test" duration-ms="2257" started-at="2019-05-03T03:58:00Z" finished-at="2019-05-03T03:58:02Z">
+      <class name="com.madhub.demo.codingTest.TC1_GetServiceTest">
+        <test-method status="PASS" signature="initialization()[pri:0, instance:com.madhub.demo.codingTest.TC1_GetServiceTest@10e41621]" name="initialization" is-config="true" duration-ms="297" started-at="2019-05-03T09:28:00Z" finished-at="2019-05-03T09:28:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method status="FAIL" signature="PUTServiceTest()[pri:0, instance:com.madhub.demo.codingTest.TC5_PutServiceTest@70e8f8e]" name="PUTServiceTest" duration-ms="189" started-at="2019-05-03T02:14:25Z" finished-at="2019-05-03T02:14:25Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="FAIL" signature="GETServiceTest()[pri:0, instance:com.madhub.demo.codingTest.TC1_GetServiceTest@10e41621]" name="GETServiceTest" duration-ms="1951" started-at="2019-05-03T09:28:00Z" finished-at="2019-05-03T09:28:02Z">
+          <exception class="junit.framework.AssertionFailedError">
+            <message>
+              <![CDATA[[Validating Json Schema]: Json Schema validation failed]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.madhub.demo.codingTest.TC5_PutServiceTest.PUTServiceTest(TC5_PutServiceTest.java:45)
+              <![CDATA[junit.framework.AssertionFailedError: [Validating Json Schema]: Json Schema validation failed
+	at junit.framework.Assert.fail(Assert.java:50)
+	at core.ResponseValidators.validateGetResponse(ResponseValidators.java:69)
+	at com.madhub.demo.codingTest.TC1_GetServiceTest.GETServiceTest(TC1_GetServiceTest.java:47)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -42,11 +47,11 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- junit.framework.AssertionFailedError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PUTServiceTest -->
-      </class> <!-- com.madhub.demo.codingTest.TC5_PutServiceTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- GETServiceTest -->
+      </class> <!-- com.madhub.demo.codingTest.TC1_GetServiceTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

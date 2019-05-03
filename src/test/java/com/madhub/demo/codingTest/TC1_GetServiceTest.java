@@ -43,7 +43,8 @@ public class TC1_GetServiceTest extends RestAssuredConfigurationBase
         RequestSpecification request = this.restHelpers.getRequestSpecification(Config.GET, null);
         Response response = this.restHelpers.getResponse(Config.GET, request, Resource.readGetServiceResource(null));
 
-        this.responseValidator.validateGetResponse(response, Constants.GET_STATUS_CODE, "JsonSchemaFullList.json", 100);
+        this.responseValidator
+            .validateGetResponse(response, Constants.GET_STATUS_CODE, "JsonSchemaSingleRecord.json", 100);
 
     }
 

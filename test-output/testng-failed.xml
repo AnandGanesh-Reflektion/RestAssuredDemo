@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test verbose="2" name="Default test">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="resources.Listeners"/>
+    <listener class-name="resources.ExtentReporterNG"/>
+  </listeners>
+  <test name="Test">
     <classes>
-      <class name="com.madhub.demo.codingTest.TC5_PutServiceTest"/>
+      <class name="com.madhub.demo.codingTest.TC1_GetServiceTest"/>
     </classes>
-  </test> <!-- Default test -->
-  <test name="Default test(failed)">
+  </test> <!-- Test -->
+  <test name="Test(failed)">
     <classes>
-      <class name="com.madhub.demo.codingTest.TC5_PutServiceTest">
+      <class name="com.madhub.demo.codingTest.TC1_GetServiceTest">
         <methods>
-          <include name="PUTServiceTest"/>
+          <include name="GETServiceTest"/>
           <include name="initialization"/>
         </methods>
-      </class> <!-- com.madhub.demo.codingTest.TC5_PutServiceTest -->
+      </class> <!-- com.madhub.demo.codingTest.TC1_GetServiceTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

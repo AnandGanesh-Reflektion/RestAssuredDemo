@@ -35,6 +35,7 @@ public class ResponseValidators
             res.then().log().all();
             if (statusCode != -1)
             {
+                // Assert.assertEquals(statusCode, res.getStatusCode());
                 try
                 {
                     Assert.assertEquals(statusCode, res.getStatusCode());
@@ -47,7 +48,9 @@ public class ResponseValidators
                     ResponseValidators.log.error(
                         "[Validating Status Code]: Expected Status Code is = " + statusCode
                                 + ", Received Status Code is " + res.getStatusCode());
-                    Assert.assertTrue(false);
+                    Assert.fail(
+                        "[Validating Status Code]: Expected Status Code is = " + statusCode
+                                + ", Received Status Code is " + res.getStatusCode());
                 }
             }
 
@@ -63,7 +66,7 @@ public class ResponseValidators
                 {
                     ResponseValidators.log.error("[Validating Json Schema]: Json Schema validation failed\n");
                     ResponseValidators.log.debug("Json schema validation error:\n" + t);
-                    Assert.assertTrue(Constants.BOOLEAN_FALSE);
+                    Assert.fail("[Validating Json Schema]: Json Schema validation failed");
                 }
             }
 
@@ -78,7 +81,9 @@ public class ResponseValidators
                         "[Validating Record Count]: Expected Record count is >= 100, but received Record count is "
                                 + recordCount);
 
-                    Assert.assertTrue(Constants.BOOLEAN_FALSE);
+                    Assert.fail(
+                        "[Validating Record Count]: Expected Record count is >= 100, but received Record count is "
+                                + recordCount);
                 }
                 else
                 {
@@ -93,7 +98,7 @@ public class ResponseValidators
         else
         {
             ResponseValidators.log.error("[Validating Response]: Received null response");
-            Assert.assertTrue(Constants.BOOLEAN_FALSE);
+            Assert.fail("[Validating Response]: Received null response");
         }
     }
 
@@ -120,7 +125,9 @@ public class ResponseValidators
                 ResponseValidators.log.error(
                     "[Validating Status Code]: Expected Status Code is = " + statusCode + ", Received Status Code is "
                             + res.getStatusCode());
-                Assert.assertTrue(false);
+                Assert.fail(
+                    "[Validating Status Code]: Expected Status Code is = " + statusCode + ", Received Status Code is "
+                            + res.getStatusCode());
             }
 
             //Validate the Response Schema
@@ -134,7 +141,7 @@ public class ResponseValidators
             {
                 ResponseValidators.log.error("[Validating Json Schema]: Json Schema validation failed\n");
                 ResponseValidators.log.debug("Json schema validation error:\n" + t);
-                Assert.assertTrue(Constants.BOOLEAN_FALSE);
+                Assert.fail("[Validating Json Schema]: Json Schema validation failed");
             }
 
             //Validate the Response records count
@@ -153,12 +160,16 @@ public class ResponseValidators
                     "[Validating Response Field]: Validation of response field " + field
                             + " has Failed: Expected value = " + Integer.parseInt(expectedFieldValue)
                             + ", Received value = " + receivedFieldValue);
+                Assert.fail(
+                    "[Validating Response Field]: Validation of response field " + field
+                            + " has Failed: Expected value = " + Integer.parseInt(expectedFieldValue)
+                            + ", Received value = " + receivedFieldValue);
             }
         }
         else
         {
             ResponseValidators.log.error("[Validating the Response]: Received null response");
-            Assert.assertTrue(Constants.BOOLEAN_FALSE);
+            Assert.fail("[Validating Response]: Received null response");
         }
     }
 }

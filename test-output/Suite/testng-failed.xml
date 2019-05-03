@@ -8,7 +8,16 @@
   <test name="Test">
     <classes>
       <class name="com.madhub.demo.codingTest.TC1_GetServiceTest"/>
-      <class name="com.madhub.demo.codingTest.TC2_GetServiceTestSingleRecord"/>
     </classes>
   </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.madhub.demo.codingTest.TC1_GetServiceTest">
+        <methods>
+          <include name="GETServiceTest"/>
+          <include name="initialization"/>
+        </methods>
+      </class> <!-- com.madhub.demo.codingTest.TC1_GetServiceTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
