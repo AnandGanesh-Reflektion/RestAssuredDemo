@@ -2,42 +2,12 @@
 <testng-results skipped="0" failed="3" total="8" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="6883" started-at="2019-05-04T20:32:36Z" finished-at="2019-05-04T20:32:42Z">
+  <suite name="Suite" duration-ms="7984" started-at="2019-05-04T20:44:53Z" finished-at="2019-05-04T20:45:01Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="6883" started-at="2019-05-04T20:32:36Z" finished-at="2019-05-04T20:32:42Z">
-      <class name="com.madhub.demo.codingTest.TC1_GetServiceTest">
-        <test-method status="PASS" signature="initialization()[pri:0, instance:com.madhub.demo.codingTest.TC1_GetServiceTest@5e82df6a]" name="initialization" is-config="true" duration-ms="404" started-at="2019-05-05T02:02:36Z" finished-at="2019-05-05T02:02:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialization -->
-        <test-method status="PASS" signature="initialization()[pri:0, instance:com.madhub.demo.codingTest.TC4_PostServiceTest@3f197a46]" name="initialization" is-config="true" duration-ms="2" started-at="2019-05-05T02:02:36Z" finished-at="2019-05-05T02:02:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialization -->
-        <test-method status="PASS" signature="initialization()[pri:0, instance:com.madhub.demo.codingTest.TC5_PutServiceTest@636be97c]" name="initialization" is-config="true" duration-ms="1" started-at="2019-05-05T02:02:36Z" finished-at="2019-05-05T02:02:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialization -->
-        <test-method status="PASS" signature="initialization()[pri:0, instance:com.madhub.demo.codingTest.TC6_DeleteServiceTest@50a638b5]" name="initialization" is-config="true" duration-ms="1" started-at="2019-05-05T02:02:36Z" finished-at="2019-05-05T02:02:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialization -->
-        <test-method status="PASS" signature="initialization()[pri:0, instance:com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase@1817d444]" name="initialization" is-config="true" duration-ms="1" started-at="2019-05-05T02:02:36Z" finished-at="2019-05-05T02:02:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialization -->
-        <test-method status="PASS" signature="initialization()[pri:0, instance:com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase@6ca8564a]" name="initialization" is-config="true" duration-ms="1" started-at="2019-05-05T02:02:36Z" finished-at="2019-05-05T02:02:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialization -->
-        <test-method status="PASS" signature="GETServiceTest()[pri:0, instance:com.madhub.demo.codingTest.TC1_GetServiceTest@5e82df6a]" name="GETServiceTest" duration-ms="2693" started-at="2019-05-05T02:02:36Z" finished-at="2019-05-05T02:02:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- GETServiceTest -->
-      </class> <!-- com.madhub.demo.codingTest.TC1_GetServiceTest -->
+    <test name="Test" duration-ms="7984" started-at="2019-05-04T20:44:53Z" finished-at="2019-05-04T20:45:01Z">
       <class name="com.madhub.demo.codingTest.TC4_PostServiceTest">
-        <test-method status="FAIL" signature="POSTServiceTest()[pri:0, instance:com.madhub.demo.codingTest.TC4_PostServiceTest@3f197a46]" name="POSTServiceTest" duration-ms="1404" started-at="2019-05-05T02:02:39Z" finished-at="2019-05-05T02:02:41Z">
+        <test-method status="FAIL" signature="POSTServiceTest()[pri:0, instance:com.madhub.demo.codingTest.TC4_PostServiceTest@50a638b5]" name="POSTServiceTest" duration-ms="1508" started-at="2019-05-05T02:14:57Z" finished-at="2019-05-05T02:14:58Z">
           <exception class="junit.framework.AssertionFailedError">
             <message>
               <![CDATA[[Validating the resource created by POST request]: Resource not created. [Status Code Validation]: junit.framework.AssertionFailedError: expected:<200> but was:<404>]]>
@@ -46,8 +16,8 @@
               <![CDATA[junit.framework.AssertionFailedError: [Validating the resource created by POST request]: Resource not created. [Status Code Validation]: junit.framework.AssertionFailedError: expected:<200> but was:<404>
 	at junit.framework.Assert.fail(Assert.java:50)
 	at core.ResponseValidators.validateResourceCreated(ResponseValidators.java:46)
-	at com.madhub.demo.codingTest.TC4_PostServiceTest.verifyRecordCreated(TC4_PostServiceTest.java:95)
-	at com.madhub.demo.codingTest.TC4_PostServiceTest.POSTServiceTest(TC4_PostServiceTest.java:81)
+	at com.madhub.demo.codingTest.TC4_PostServiceTest.verifyRecordCreated(TC4_PostServiceTest.java:100)
+	at com.madhub.demo.codingTest.TC4_PostServiceTest.POSTServiceTest(TC4_PostServiceTest.java:86)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -79,8 +49,38 @@
           </reporter-output>
         </test-method> <!-- POSTServiceTest -->
       </class> <!-- com.madhub.demo.codingTest.TC4_PostServiceTest -->
+      <class name="com.madhub.demo.codingTest.TC1_GetServiceTest">
+        <test-method status="PASS" signature="initialization()[pri:0, instance:com.madhub.demo.codingTest.TC1_GetServiceTest@636be97c]" name="initialization" is-config="true" duration-ms="375" started-at="2019-05-05T02:14:53Z" finished-at="2019-05-05T02:14:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method status="PASS" signature="initialization()[pri:0, instance:com.madhub.demo.codingTest.TC4_PostServiceTest@50a638b5]" name="initialization" is-config="true" duration-ms="2" started-at="2019-05-05T02:14:53Z" finished-at="2019-05-05T02:14:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method status="PASS" signature="initialization()[pri:0, instance:com.madhub.demo.codingTest.TC5_PutServiceTest@1817d444]" name="initialization" is-config="true" duration-ms="1" started-at="2019-05-05T02:14:53Z" finished-at="2019-05-05T02:14:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method status="PASS" signature="initialization()[pri:0, instance:com.madhub.demo.codingTest.TC6_DeleteServiceTest@6ca8564a]" name="initialization" is-config="true" duration-ms="1" started-at="2019-05-05T02:14:53Z" finished-at="2019-05-05T02:14:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method status="PASS" signature="initialization()[pri:0, instance:com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase@50b472aa]" name="initialization" is-config="true" duration-ms="2" started-at="2019-05-05T02:14:53Z" finished-at="2019-05-05T02:14:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method status="PASS" signature="initialization()[pri:0, instance:com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase@31368b99]" name="initialization" is-config="true" duration-ms="1" started-at="2019-05-05T02:14:53Z" finished-at="2019-05-05T02:14:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method status="PASS" signature="GETServiceTest()[pri:0, instance:com.madhub.demo.codingTest.TC1_GetServiceTest@636be97c]" name="GETServiceTest" duration-ms="2636" started-at="2019-05-05T02:14:53Z" finished-at="2019-05-05T02:14:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GETServiceTest -->
+      </class> <!-- com.madhub.demo.codingTest.TC1_GetServiceTest -->
       <class name="com.madhub.demo.codingTest.TC5_PutServiceTest">
-        <test-method status="FAIL" signature="PUTServiceTest()[pri:0, instance:com.madhub.demo.codingTest.TC5_PutServiceTest@636be97c]" name="PUTServiceTest" duration-ms="944" started-at="2019-05-05T02:02:41Z" finished-at="2019-05-05T02:02:41Z">
+        <test-method status="FAIL" signature="PUTServiceTest()[pri:0, instance:com.madhub.demo.codingTest.TC5_PutServiceTest@1817d444]" name="PUTServiceTest" duration-ms="1037" started-at="2019-05-05T02:14:58Z" finished-at="2019-05-05T02:14:59Z">
           <exception class="junit.framework.AssertionFailedError">
             <message>
               <![CDATA[[Validting Newly Created/Updated Resource]: "title" value is not as expected.  Value requested =abc, but received=sunt aut facere repellat provident occaecati excepturi optio reprehenderit]]>
@@ -122,25 +122,31 @@
         </test-method> <!-- PUTServiceTest -->
       </class> <!-- com.madhub.demo.codingTest.TC5_PutServiceTest -->
       <class name="com.madhub.demo.codingTest.TC2_GetServiceTestSingleRecord">
-        <test-method status="PASS" signature="GETServiceTestSingleRecord()[pri:0, instance:com.madhub.demo.codingTest.TC2_GetServiceTestSingleRecord@50b472aa]" name="GETServiceTestSingleRecord" duration-ms="207" started-at="2019-05-05T02:02:39Z" finished-at="2019-05-05T02:02:39Z">
+        <test-method status="PASS" signature="GETServiceTestSingleRecord()[pri:0, instance:com.madhub.demo.codingTest.TC2_GetServiceTestSingleRecord@1725dc0f]" name="GETServiceTestSingleRecord" duration-ms="203" started-at="2019-05-05T02:14:56Z" finished-at="2019-05-05T02:14:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GETServiceTestSingleRecord -->
       </class> <!-- com.madhub.demo.codingTest.TC2_GetServiceTestSingleRecord -->
       <class name="com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase">
-        <test-method status="PASS" signature="GetServiceLowerBoundaryCase()[pri:0, instance:com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase@1817d444]" name="GetServiceLowerBoundaryCase" duration-ms="167" started-at="2019-05-05T02:02:42Z" finished-at="2019-05-05T02:02:42Z">
+        <test-method status="PASS" signature="GetServiceLowerBoundaryCase()[pri:0, instance:com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase@50b472aa]" name="GetServiceLowerBoundaryCase" duration-ms="681" started-at="2019-05-05T02:15:00Z" finished-at="2019-05-05T02:15:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetServiceLowerBoundaryCase -->
       </class> <!-- com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase -->
       <class name="com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase">
-        <test-method status="PASS" signature="GetServiceUpperBoundaryCase()[pri:0, instance:com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase@6ca8564a]" name="GetServiceUpperBoundaryCase" duration-ms="172" started-at="2019-05-05T02:02:42Z" finished-at="2019-05-05T02:02:42Z">
+        <test-method status="PASS" signature="GetServiceUpperBoundaryCase()[pri:0, instance:com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase@31368b99]" name="GetServiceUpperBoundaryCase" duration-ms="210" started-at="2019-05-05T02:15:01Z" finished-at="2019-05-05T02:15:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetServiceUpperBoundaryCase -->
       </class> <!-- com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase -->
+      <class name="com.madhub.demo.codingTest.TC3_GetServiceInvalidResource">
+        <test-method status="PASS" signature="GETServiceWithInvalidResource()[pri:0, instance:com.madhub.demo.codingTest.TC3_GetServiceInvalidResource@3911c2a7]" name="GETServiceWithInvalidResource" duration-ms="749" started-at="2019-05-05T02:14:56Z" finished-at="2019-05-05T02:14:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GETServiceWithInvalidResource -->
+      </class> <!-- com.madhub.demo.codingTest.TC3_GetServiceInvalidResource -->
       <class name="com.madhub.demo.codingTest.TC6_DeleteServiceTest">
-        <test-method status="FAIL" signature="DeleteServiceTest()[pri:0, instance:com.madhub.demo.codingTest.TC6_DeleteServiceTest@50a638b5]" name="DeleteServiceTest" duration-ms="664" started-at="2019-05-05T02:02:41Z" finished-at="2019-05-05T02:02:42Z">
+        <test-method status="FAIL" signature="DeleteServiceTest()[pri:0, instance:com.madhub.demo.codingTest.TC6_DeleteServiceTest@6ca8564a]" name="DeleteServiceTest" duration-ms="543" started-at="2019-05-05T02:14:59Z" finished-at="2019-05-05T02:15:00Z">
           <exception class="junit.framework.AssertionFailedError">
             <message>
               <![CDATA[[Validating Json Schema]: Json Schema validation failed. 
@@ -259,12 +265,6 @@ error: object has missing required properties (["body","id","title","userId"])
           </reporter-output>
         </test-method> <!-- DeleteServiceTest -->
       </class> <!-- com.madhub.demo.codingTest.TC6_DeleteServiceTest -->
-      <class name="com.madhub.demo.codingTest.TC3_GetServiceInvalidResource">
-        <test-method status="PASS" signature="GETServiceWithInvalidResource()[pri:0, instance:com.madhub.demo.codingTest.TC3_GetServiceInvalidResource@31368b99]" name="GETServiceWithInvalidResource" duration-ms="200" started-at="2019-05-05T02:02:39Z" finished-at="2019-05-05T02:02:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- GETServiceWithInvalidResource -->
-      </class> <!-- com.madhub.demo.codingTest.TC3_GetServiceInvalidResource -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -27,6 +27,7 @@ import core.RestAssuredConfigurationBase;
 import core.RestAssuredHelpers;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import resources.POSTPayloadBuilder;
 
 public class TC4_PostServiceTest
 {
@@ -46,7 +47,7 @@ public class TC4_PostServiceTest
 
     private String charsetHeaderValue;
 
-    //HashMap<String, String> headers = new HashMap<String, String>();
+    POSTPayloadBuilder payload = new POSTPayloadBuilder();
 
     public TC4_PostServiceTest()
     {
@@ -54,6 +55,9 @@ public class TC4_PostServiceTest
         this.contentTypeHeaderValue = "application/json";
         this.charsetHeaderKey = "charset";
         this.charsetHeaderValue = "UTF-8";
+        this.payload.payload_title = "foo";
+        this.payload.payload_body = "bar";
+        this.payload.payload_userId = 1;
     }
 
     @BeforeTest
@@ -71,7 +75,8 @@ public class TC4_PostServiceTest
         headers.put(this.contentTypeHeaderKey, this.contentTypeHeaderValue);
         headers.put(this.charsetHeaderKey, this.charsetHeaderValue);
 
-        RequestSpecification request = this.restHelpers.getRequestSpecification(Payload.postPayload(), headers);
+        RequestSpecification request = this.restHelpers
+            .getRequestSpecification(Payload.postPayload(this.payload), headers);
         Response response = this.restHelpers.getResponse(Config.POST, request, Resource.readGetServiceResource(null));
         //System.out.println(respone.asString());
         this.responseValidator

@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -164,18 +164,19 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.madhub.demo.codingTest.TC5_PutServiceTest</span>
+              <span class="class-name">com.madhub.demo.codingTest.TC4_PostServiceTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="PUTServiceTest">
-                  </a> <!-- PUTServiceTest -->
-                  <span class="method-name">PUTServiceTest</span>
-                  <div class="stack-trace">junit.framework.AssertionFailedError: [Validting Newly Created/Updated Resource]: &quot;title&quot; value is not as expected.  Value requested =abc, but received=sunt aut facere repellat provident occaecati excepturi optio reprehenderit
+                  <a name="POSTServiceTest">
+                  </a> <!-- POSTServiceTest -->
+                  <span class="method-name">POSTServiceTest</span>
+                  <div class="stack-trace">junit.framework.AssertionFailedError: [Validating the resource created by POST request]: Resource not created. [Status Code Validation]: junit.framework.AssertionFailedError: expected:&lt;200&gt; but was:&lt;404&gt;
 	at junit.framework.Assert.fail(Assert.java:50)
-	at core.ResponseValidators.compareResponseData(ResponseValidators.java:67)
-	at com.madhub.demo.codingTest.TC5_PutServiceTest.PUTServiceTest(TC5_PutServiceTest.java:117)
+	at core.ResponseValidators.validateResourceCreated(ResponseValidators.java:46)
+	at com.madhub.demo.codingTest.TC4_PostServiceTest.verifyRecordCreated(TC4_PostServiceTest.java:100)
+	at com.madhub.demo.codingTest.TC4_PostServiceTest.POSTServiceTest(TC4_PostServiceTest.java:86)
 ... Removed 24 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -245,19 +246,18 @@ error: object has missing required properties ([&quot;body&quot;,&quot;id&quot;,
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.madhub.demo.codingTest.TC4_PostServiceTest</span>
+              <span class="class-name">com.madhub.demo.codingTest.TC5_PutServiceTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="POSTServiceTest">
-                  </a> <!-- POSTServiceTest -->
-                  <span class="method-name">POSTServiceTest</span>
-                  <div class="stack-trace">junit.framework.AssertionFailedError: [Validating the resource created by POST request]: Resource not created. [Status Code Validation]: junit.framework.AssertionFailedError: expected:&lt;200&gt; but was:&lt;404&gt;
+                  <a name="PUTServiceTest">
+                  </a> <!-- PUTServiceTest -->
+                  <span class="method-name">PUTServiceTest</span>
+                  <div class="stack-trace">junit.framework.AssertionFailedError: [Validting Newly Created/Updated Resource]: &quot;title&quot; value is not as expected.  Value requested =abc, but received=sunt aut facere repellat provident occaecati excepturi optio reprehenderit
 	at junit.framework.Assert.fail(Assert.java:50)
-	at core.ResponseValidators.validateResourceCreated(ResponseValidators.java:46)
-	at com.madhub.demo.codingTest.TC4_PostServiceTest.verifyRecordCreated(TC4_PostServiceTest.java:95)
-	at com.madhub.demo.codingTest.TC4_PostServiceTest.POSTServiceTest(TC4_PostServiceTest.java:81)
+	at core.ResponseValidators.compareResponseData(ResponseValidators.java:67)
+	at com.madhub.demo.codingTest.TC5_PutServiceTest.PUTServiceTest(TC5_PutServiceTest.java:117)
 ... Removed 24 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -267,14 +267,14 @@ error: object has missing required properties ([&quot;body&quot;,&quot;id&quot;,
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.madhub.demo.codingTest.TC2_GetServiceTestSingleRecord</span>
+              <span class="class-name">com.madhub.demo.codingTest.TC3_GetServiceInvalidResource</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="GETServiceTestSingleRecord">
-                  </a> <!-- GETServiceTestSingleRecord -->
-                  <span class="method-name">GETServiceTestSingleRecord</span>
+                  <a name="GETServiceWithInvalidResource">
+                  </a> <!-- GETServiceWithInvalidResource -->
+                  <span class="method-name">GETServiceWithInvalidResource</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -312,14 +312,14 @@ error: object has missing required properties ([&quot;body&quot;,&quot;id&quot;,
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.madhub.demo.codingTest.TC3_GetServiceInvalidResource</span>
+              <span class="class-name">com.madhub.demo.codingTest.TC2_GetServiceTestSingleRecord</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="GETServiceWithInvalidResource">
-                  </a> <!-- GETServiceWithInvalidResource -->
-                  <span class="method-name">GETServiceWithInvalidResource</span>
+                  <a name="GETServiceTestSingleRecord">
+                  </a> <!-- GETServiceTestSingleRecord -->
+                  <span class="method-name">GETServiceTestSingleRecord</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -365,43 +365,6 @@ error: object has missing required properties ([&quot;body&quot;,&quot;id&quot;,
       &lt;class name=&quot;com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
-  &lt;test name=&quot;Test(failed)&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.madhub.demo.codingTest.TC5_PutServiceTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;PUTServiceTest&quot;/&gt;
-          &lt;include name=&quot;initialization&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.madhub.demo.codingTest.TC5_PutServiceTest --&gt;
-      &lt;class name=&quot;com.madhub.demo.codingTest.TC6_DeleteServiceTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;initialization&quot;/&gt;
-          &lt;include name=&quot;DeleteServiceTest&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.madhub.demo.codingTest.TC6_DeleteServiceTest --&gt;
-      &lt;class name=&quot;com.madhub.demo.codingTest.TC4_PostServiceTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;POSTServiceTest&quot;/&gt;
-          &lt;include name=&quot;initialization&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.madhub.demo.codingTest.TC4_PostServiceTest --&gt;
-      &lt;class name=&quot;com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;initialization&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase --&gt;
-      &lt;class name=&quot;com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;initialization&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase --&gt;
-      &lt;class name=&quot;com.madhub.demo.codingTest.TC1_GetServiceTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;initialization&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.madhub.demo.codingTest.TC1_GetServiceTest --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test(failed) --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -414,9 +377,6 @@ error: object has missing required properties ([&quot;body&quot;,&quot;id&quot;,
             <ul>
               <li>
                 <span class="test-name">Test (8 classes)</span>
-              </li>
-              <li>
-                <span class="test-name">Test(failed) (6 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -446,40 +406,40 @@ data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'GETServiceTest')
 data.setCell(0, 2, 'com.madhub.demo.codingTest.TC1_GetServiceTest')
-data.setCell(0, 3, 2693);
+data.setCell(0, 3, 2636);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'POSTServiceTest')
 data.setCell(1, 2, 'com.madhub.demo.codingTest.TC4_PostServiceTest')
-data.setCell(1, 3, 1404);
+data.setCell(1, 3, 1508);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'PUTServiceTest')
 data.setCell(2, 2, 'com.madhub.demo.codingTest.TC5_PutServiceTest')
-data.setCell(2, 3, 944);
+data.setCell(2, 3, 1037);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'DeleteServiceTest')
-data.setCell(3, 2, 'com.madhub.demo.codingTest.TC6_DeleteServiceTest')
-data.setCell(3, 3, 664);
+data.setCell(3, 1, 'GETServiceWithInvalidResource')
+data.setCell(3, 2, 'com.madhub.demo.codingTest.TC3_GetServiceInvalidResource')
+data.setCell(3, 3, 749);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'GETServiceTestSingleRecord')
-data.setCell(4, 2, 'com.madhub.demo.codingTest.TC2_GetServiceTestSingleRecord')
-data.setCell(4, 3, 207);
+data.setCell(4, 1, 'GetServiceLowerBoundaryCase')
+data.setCell(4, 2, 'com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase')
+data.setCell(4, 3, 681);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'GETServiceWithInvalidResource')
-data.setCell(5, 2, 'com.madhub.demo.codingTest.TC3_GetServiceInvalidResource')
-data.setCell(5, 3, 200);
+data.setCell(5, 1, 'DeleteServiceTest')
+data.setCell(5, 2, 'com.madhub.demo.codingTest.TC6_DeleteServiceTest')
+data.setCell(5, 3, 543);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'GetServiceUpperBoundaryCase')
 data.setCell(6, 2, 'com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase')
-data.setCell(6, 3, 172);
+data.setCell(6, 3, 210);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'GetServiceLowerBoundaryCase')
-data.setCell(7, 2, 'com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase')
-data.setCell(7, 3, 167);
+data.setCell(7, 1, 'GETServiceTestSingleRecord')
+data.setCell(7, 2, 'com.madhub.demo.codingTest.TC2_GetServiceTestSingleRecord')
+data.setCell(7, 3, 203);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -515,56 +475,56 @@ return data;
               <div class="chronological-class-name">com.madhub.demo.codingTest.TC4_PostServiceTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">initialization</span>
-                <span class="method-start">404 ms</span>
+                <span class="method-start">375 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.madhub.demo.codingTest.TC5_PutServiceTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">initialization</span>
-                <span class="method-start">406 ms</span>
+                <span class="method-start">377 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.madhub.demo.codingTest.TC6_DeleteServiceTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">initialization</span>
-                <span class="method-start">407 ms</span>
+                <span class="method-start">378 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">initialization</span>
-                <span class="method-start">408 ms</span>
+                <span class="method-start">379 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">initialization</span>
-                <span class="method-start">409 ms</span>
+                <span class="method-start">381 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.madhub.demo.codingTest.TC1_GetServiceTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">GETServiceTest</span>
-                <span class="method-start">417 ms</span>
+                <span class="method-start">388 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.madhub.demo.codingTest.TC2_GetServiceTestSingleRecord</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">GETServiceTestSingleRecord</span>
-                <span class="method-start">3113 ms</span>
+                <span class="method-start">3026 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.madhub.demo.codingTest.TC3_GetServiceInvalidResource</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">GETServiceWithInvalidResource</span>
-                <span class="method-start">3322 ms</span>
+                <span class="method-start">3230 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -573,7 +533,7 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">POSTServiceTest</span>
-                <span class="method-start">3523 ms</span>
+                <span class="method-start">3980 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -582,7 +542,7 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">PUTServiceTest</span>
-                <span class="method-start">4929 ms</span>
+                <span class="method-start">5498 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -591,21 +551,21 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">DeleteServiceTest</span>
-                <span class="method-start">5875 ms</span>
+                <span class="method-start">6538 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">GetServiceLowerBoundaryCase</span>
-                <span class="method-start">6540 ms</span>
+                <span class="method-start">7089 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">GetServiceUpperBoundaryCase</span>
-                <span class="method-start">6707 ms</span>
+                <span class="method-start">7771 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

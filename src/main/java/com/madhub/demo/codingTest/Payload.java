@@ -15,21 +15,23 @@ package com.madhub.demo.codingTest;
 
 import org.json.simple.JSONObject;
 
+import resources.POSTPayloadBuilder;
 import resources.PayloadBuilder;
 
 public class Payload
 {
 
-    public static String postPayload()
+    public static String postPayload(POSTPayloadBuilder payload)
     {
         JSONObject requestParam = new JSONObject();
-        /*        requestParam.put("id", payload.payload_id);
+
         requestParam.put("title", payload.payload_title);
         requestParam.put("body", payload.payload_body);
         requestParam.put("userId", payload.payload_userId);
-        */
-        String payload = "{" + "\"title\" : \"foo\" ," + "\"body\" : \"bar\" ," + "\"userId\" : 1" + "}";
-        return payload;
+        return requestParam.toJSONString();
+
+        /* String payload = "{" + "\"title\" : \"foo\" ," + "\"body\" : \"bar\" ," + "\"userId\" : 1" + "}";
+        return payload;*/
     }
 
     public static String putPayload(PayloadBuilder payload)
@@ -42,9 +44,8 @@ public class Payload
         requestParam.put("title", payload.payload_title);
         requestParam.put("body", payload.payload_body);
         requestParam.put("userId", payload.payload_userId);
-        //System.out.println("PutPayloadBuilt=" + requestParam.toJSONString());
+
         return requestParam.toJSONString();
-        //return body;
     }
 
 }

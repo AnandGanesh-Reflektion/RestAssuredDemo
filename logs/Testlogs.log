@@ -1,13 +1,34 @@
-02:02:42.626 [main] INFO  resources.Listeners - Begin Test Case: [GetServiceLowerBoundaryCase]
-02:02:42.632 [main] INFO  resources.Listeners - ======================================================
-02:02:42.793 [main] INFO  core.ResponseValidators - [Validating Status Code]: Received Status Code = 404. Matches the Expected.
-02:02:42.793 [main] INFO  resources.Listeners - ======================================================
-02:02:42.793 [main] INFO  resources.Listeners - Passed Test Case: [GetServiceLowerBoundaryCase]
-02:02:42.793 [main] INFO  resources.Listeners - ======================================================
-02:02:42.794 [main] INFO  resources.Listeners - ======================================================
-02:02:42.794 [main] INFO  resources.Listeners - Begin Test Case: [GetServiceUpperBoundaryCase]
-02:02:42.794 [main] INFO  resources.Listeners - ======================================================
-02:02:42.965 [main] INFO  core.ResponseValidators - [Validating Status Code]: Received Status Code = 404. Matches the Expected.
-02:02:42.965 [main] INFO  resources.Listeners - ======================================================
-02:02:42.965 [main] INFO  resources.Listeners - Passed Test Case: [GetServiceUpperBoundaryCase]
-02:02:42.965 [main] INFO  resources.Listeners - ======================================================
+02:14:58.842 [main] INFO  resources.Listeners - ======================================================
+02:14:58.850 [main] INFO  resources.Listeners - Failed Test Case: [POSTServiceTest]
+02:14:58.850 [main] INFO  resources.Listeners - ======================================================
+02:14:58.850 [main] INFO  resources.Listeners - ======================================================
+02:14:58.850 [main] INFO  resources.Listeners - Begin Test Case: [PUTServiceTest]
+02:14:58.850 [main] INFO  resources.Listeners - ======================================================
+02:14:59.646 [main] INFO  core.ResponseValidators - [Validating Status Code]: Received Status Code = 200. Matches the Expected.
+02:14:59.653 [main] INFO  core.ResponseValidators - [Validating Json Schema]: Json Schema is as expected.
+02:14:59.888 [main] INFO  resources.Listeners - ======================================================
+02:14:59.888 [main] INFO  resources.Listeners - Failed Test Case: [PUTServiceTest]
+02:14:59.888 [main] INFO  resources.Listeners - ======================================================
+02:14:59.891 [main] INFO  resources.Listeners - ======================================================
+02:14:59.891 [main] INFO  resources.Listeners - Begin Test Case: [DeleteServiceTest]
+02:14:59.891 [main] INFO  resources.Listeners - ======================================================
+02:15:00.391 [main] INFO  core.ResponseValidators - [Validating Status Code]: Received Status Code = 200. Matches the Expected.
+02:15:00.432 [main] ERROR core.ResponseValidators - [Validating Json Schema]: Json Schema validation failed
+
+02:15:00.438 [main] INFO  resources.Listeners - ======================================================
+02:15:00.439 [main] INFO  resources.Listeners - Failed Test Case: [DeleteServiceTest]
+02:15:00.439 [main] INFO  resources.Listeners - ======================================================
+02:15:00.442 [main] INFO  resources.Listeners - ======================================================
+02:15:00.443 [main] INFO  resources.Listeners - Begin Test Case: [GetServiceLowerBoundaryCase]
+02:15:00.443 [main] INFO  resources.Listeners - ======================================================
+02:15:01.122 [main] INFO  core.ResponseValidators - [Validating Status Code]: Received Status Code = 404. Matches the Expected.
+02:15:01.122 [main] INFO  resources.Listeners - ======================================================
+02:15:01.122 [main] INFO  resources.Listeners - Passed Test Case: [GetServiceLowerBoundaryCase]
+02:15:01.122 [main] INFO  resources.Listeners - ======================================================
+02:15:01.123 [main] INFO  resources.Listeners - ======================================================
+02:15:01.123 [main] INFO  resources.Listeners - Begin Test Case: [GetServiceUpperBoundaryCase]
+02:15:01.123 [main] INFO  resources.Listeners - ======================================================
+02:15:01.333 [main] INFO  core.ResponseValidators - [Validating Status Code]: Received Status Code = 404. Matches the Expected.
+02:15:01.333 [main] INFO  resources.Listeners - ======================================================
+02:15:01.333 [main] INFO  resources.Listeners - Passed Test Case: [GetServiceUpperBoundaryCase]
+02:15:01.333 [main] INFO  resources.Listeners - ======================================================
