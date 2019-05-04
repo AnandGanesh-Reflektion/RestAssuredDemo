@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -49,12 +49,12 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\Users\basavma\RestAssuredDemo\testng2.xml</span>
+                    <span>C:\Users\basavma\RestAssuredDemo\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">8 methods, 3 failed,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,10 +102,54 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.madhub.demo.codingTest.TC1_GetServiceTest" hash-for-method="GETServiceTest">GETServiceTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.madhub.demo.codingTest.TC6_DeleteServiceTest" hash-for-method="DeleteServiceTest">DeleteServiceTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.madhub.demo.codingTest.TC4_PostServiceTest" hash-for-method="POSTServiceTest">POSTServiceTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.madhub.demo.codingTest.TC5_PutServiceTest" hash-for-method="PUTServiceTest">PUTServiceTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.madhub.demo.codingTest.TC1_GetServiceTest" hash-for-method="GETServiceTest">GETServiceTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.madhub.demo.codingTest.TC2_GetServiceTestSingleRecord" hash-for-method="GETServiceTestSingleRecord">GETServiceTestSingleRecord</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.madhub.demo.codingTest.TC3_GetServiceInvalidResource" hash-for-method="GETServiceWithInvalidResource">GETServiceWithInvalidResource</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase" hash-for-method="GetServiceLowerBoundaryCase">GetServiceLowerBoundaryCase</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase" hash-for-method="GetServiceUpperBoundaryCase">GetServiceUpperBoundaryCase</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -120,6 +164,169 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
+              <span class="class-name">com.madhub.demo.codingTest.TC5_PutServiceTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="PUTServiceTest">
+                  </a> <!-- PUTServiceTest -->
+                  <span class="method-name">PUTServiceTest</span>
+                  <div class="stack-trace">junit.framework.AssertionFailedError: [Validting Newly Created/Updated Resource]: &quot;title&quot; value is not as expected.  Value requested =abc, but received=sunt aut facere repellat provident occaecati excepturi optio reprehenderit
+	at junit.framework.Assert.fail(Assert.java:50)
+	at core.ResponseValidators.compareResponseData(ResponseValidators.java:67)
+	at com.madhub.demo.codingTest.TC5_PutServiceTest.PUTServiceTest(TC5_PutServiceTest.java:117)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.madhub.demo.codingTest.TC6_DeleteServiceTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="DeleteServiceTest">
+                  </a> <!-- DeleteServiceTest -->
+                  <span class="method-name">DeleteServiceTest</span>
+                  <div class="stack-trace">junit.framework.AssertionFailedError: [Validating Json Schema]: Json Schema validation failed. 
+1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: The content to match the given JSON schema.
+warning: the following keywords are unknown and will be ignored: [$id]
+    level: &quot;warning&quot;
+    schema: {&quot;loadingURI&quot;:&quot;file:/C:/Users/basavma/RestAssuredDemo/target/classes/JsonSchemaSingleRecord.json#&quot;,&quot;pointer&quot;:&quot;&quot;}
+    domain: &quot;syntax&quot;
+    ignored: [&quot;$id&quot;]
+warning: the following keywords are unknown and will be ignored: [$id, examples]
+    level: &quot;warning&quot;
+    schema: {&quot;loadingURI&quot;:&quot;file:/C:/Users/basavma/RestAssuredDemo/target/classes/JsonSchemaSingleRecord.json#&quot;,&quot;pointer&quot;:&quot;/properties/body&quot;}
+    domain: &quot;syntax&quot;
+    ignored: [&quot;$id&quot;,&quot;examples&quot;]
+warning: the following keywords are unknown and will be ignored: [$id, examples]
+    level: &quot;warning&quot;
+    schema: {&quot;loadingURI&quot;:&quot;file:/C:/Users/basavma/RestAssuredDemo/target/classes/JsonSchemaSingleRecord.json#&quot;,&quot;pointer&quot;:&quot;/properties/id&quot;}
+    domain: &quot;syntax&quot;
+    ignored: [&quot;$id&quot;,&quot;examples&quot;]
+warning: the following keywords are unknown and will be ignored: [$id, examples]
+    level: &quot;warning&quot;
+    schema: {&quot;loadingURI&quot;:&quot;file:/C:/Users/basavma/RestAssuredDemo/target/classes/JsonSchemaSingleRecord.json#&quot;,&quot;pointer&quot;:&quot;/properties/title&quot;}
+    domain: &quot;syntax&quot;
+    ignored: [&quot;$id&quot;,&quot;examples&quot;]
+warning: the following keywords are unknown and will be ignored: [$id, examples]
+    level: &quot;warning&quot;
+    schema: {&quot;loadingURI&quot;:&quot;file:/C:/Users/basavma/RestAssuredDemo/target/classes/JsonSchemaSingleRecord.json#&quot;,&quot;pointer&quot;:&quot;/properties/userId&quot;}
+    domain: &quot;syntax&quot;
+    ignored: [&quot;$id&quot;,&quot;examples&quot;]
+error: object has missing required properties ([&quot;body&quot;,&quot;id&quot;,&quot;title&quot;,&quot;userId&quot;])
+    level: &quot;error&quot;
+    schema: {&quot;loadingURI&quot;:&quot;file:/C:/Users/basavma/RestAssuredDemo/target/classes/JsonSchemaSingleRecord.json#&quot;,&quot;pointer&quot;:&quot;&quot;}
+    instance: {&quot;pointer&quot;:&quot;&quot;}
+    domain: &quot;validation&quot;
+    keyword: &quot;required&quot;
+    required: [&quot;body&quot;,&quot;id&quot;,&quot;title&quot;,&quot;userId&quot;]
+    missing: [&quot;body&quot;,&quot;id&quot;,&quot;title&quot;,&quot;userId&quot;]
+
+  Actual: {}
+
+	at junit.framework.Assert.fail(Assert.java:50)
+	at core.ResponseValidators.validateGetResponse(ResponseValidators.java:127)
+	at com.madhub.demo.codingTest.TC6_DeleteServiceTest.DeleteServiceTest(TC6_DeleteServiceTest.java:68)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.madhub.demo.codingTest.TC4_PostServiceTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="POSTServiceTest">
+                  </a> <!-- POSTServiceTest -->
+                  <span class="method-name">POSTServiceTest</span>
+                  <div class="stack-trace">junit.framework.AssertionFailedError: [Validating the resource created by POST request]: Resource not created. [Status Code Validation]: junit.framework.AssertionFailedError: expected:&lt;200&gt; but was:&lt;404&gt;
+	at junit.framework.Assert.fail(Assert.java:50)
+	at core.ResponseValidators.validateResourceCreated(ResponseValidators.java:46)
+	at com.madhub.demo.codingTest.TC4_PostServiceTest.verifyRecordCreated(TC4_PostServiceTest.java:95)
+	at com.madhub.demo.codingTest.TC4_PostServiceTest.POSTServiceTest(TC4_PostServiceTest.java:81)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.madhub.demo.codingTest.TC2_GetServiceTestSingleRecord</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="GETServiceTestSingleRecord">
+                  </a> <!-- GETServiceTestSingleRecord -->
+                  <span class="method-name">GETServiceTestSingleRecord</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="GetServiceUpperBoundaryCase">
+                  </a> <!-- GetServiceUpperBoundaryCase -->
+                  <span class="method-name">GetServiceUpperBoundaryCase</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="GetServiceLowerBoundaryCase">
+                  </a> <!-- GetServiceLowerBoundaryCase -->
+                  <span class="method-name">GetServiceLowerBoundaryCase</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.madhub.demo.codingTest.TC3_GetServiceInvalidResource</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="GETServiceWithInvalidResource">
+                  </a> <!-- GETServiceWithInvalidResource -->
+                  <span class="method-name">GETServiceWithInvalidResource</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">com.madhub.demo.codingTest.TC1_GetServiceTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -128,20 +335,14 @@
                   <a name="GETServiceTest">
                   </a> <!-- GETServiceTest -->
                   <span class="method-name">GETServiceTest</span>
-                  <div class="stack-trace">junit.framework.AssertionFailedError: [Validating Json Schema]: Json Schema validation failed
-	at junit.framework.Assert.fail(Assert.java:50)
-	at core.ResponseValidators.validateGetResponse(ResponseValidators.java:69)
-	at com.madhub.demo.codingTest.TC1_GetServiceTest.GETServiceTest(TC1_GetServiceTest.java:47)
-... Removed 24 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\basavma\RestAssuredDemo\testng2.xml</span>
+            <span class="header-content">C:\Users\basavma\RestAssuredDemo\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -155,8 +356,52 @@
   &lt;test name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.madhub.demo.codingTest.TC1_GetServiceTest&quot;/&gt;
+      &lt;class name=&quot;com.madhub.demo.codingTest.TC2_GetServiceTestSingleRecord&quot;/&gt;
+      &lt;class name=&quot;com.madhub.demo.codingTest.TC3_GetServiceInvalidResource&quot;/&gt;
+      &lt;class name=&quot;com.madhub.demo.codingTest.TC4_PostServiceTest&quot;/&gt;
+      &lt;class name=&quot;com.madhub.demo.codingTest.TC5_PutServiceTest&quot;/&gt;
+      &lt;class name=&quot;com.madhub.demo.codingTest.TC6_DeleteServiceTest&quot;/&gt;
+      &lt;class name=&quot;com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase&quot;/&gt;
+      &lt;class name=&quot;com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;test name=&quot;Test(failed)&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.madhub.demo.codingTest.TC5_PutServiceTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;PUTServiceTest&quot;/&gt;
+          &lt;include name=&quot;initialization&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.madhub.demo.codingTest.TC5_PutServiceTest --&gt;
+      &lt;class name=&quot;com.madhub.demo.codingTest.TC6_DeleteServiceTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;initialization&quot;/&gt;
+          &lt;include name=&quot;DeleteServiceTest&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.madhub.demo.codingTest.TC6_DeleteServiceTest --&gt;
+      &lt;class name=&quot;com.madhub.demo.codingTest.TC4_PostServiceTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;POSTServiceTest&quot;/&gt;
+          &lt;include name=&quot;initialization&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.madhub.demo.codingTest.TC4_PostServiceTest --&gt;
+      &lt;class name=&quot;com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;initialization&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase --&gt;
+      &lt;class name=&quot;com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;initialization&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase --&gt;
+      &lt;class name=&quot;com.madhub.demo.codingTest.TC1_GetServiceTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;initialization&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.madhub.demo.codingTest.TC1_GetServiceTest --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test(failed) --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -168,7 +413,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (8 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Test(failed) (6 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -194,16 +442,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'GETServiceTest')
 data.setCell(0, 2, 'com.madhub.demo.codingTest.TC1_GetServiceTest')
-data.setCell(0, 3, 1951);
+data.setCell(0, 3, 2693);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'POSTServiceTest')
+data.setCell(1, 2, 'com.madhub.demo.codingTest.TC4_PostServiceTest')
+data.setCell(1, 3, 1404);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'PUTServiceTest')
+data.setCell(2, 2, 'com.madhub.demo.codingTest.TC5_PutServiceTest')
+data.setCell(2, 3, 944);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'DeleteServiceTest')
+data.setCell(3, 2, 'com.madhub.demo.codingTest.TC6_DeleteServiceTest')
+data.setCell(3, 3, 664);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'GETServiceTestSingleRecord')
+data.setCell(4, 2, 'com.madhub.demo.codingTest.TC2_GetServiceTestSingleRecord')
+data.setCell(4, 3, 207);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'GETServiceWithInvalidResource')
+data.setCell(5, 2, 'com.madhub.demo.codingTest.TC3_GetServiceInvalidResource')
+data.setCell(5, 3, 200);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'GetServiceUpperBoundaryCase')
+data.setCell(6, 2, 'com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase')
+data.setCell(6, 3, 172);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'GetServiceLowerBoundaryCase')
+data.setCell(7, 2, 'com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase')
+data.setCell(7, 3, 167);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -234,11 +510,102 @@ return data;
                 <span class="method-name">initialization</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.madhub.demo.codingTest.TC4_PostServiceTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">initialization</span>
+                <span class="method-start">404 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.madhub.demo.codingTest.TC5_PutServiceTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">initialization</span>
+                <span class="method-start">406 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.madhub.demo.codingTest.TC6_DeleteServiceTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">initialization</span>
+                <span class="method-start">407 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">initialization</span>
+                <span class="method-start">408 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">initialization</span>
+                <span class="method-start">409 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.madhub.demo.codingTest.TC1_GetServiceTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">GETServiceTest</span>
+                <span class="method-start">417 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.madhub.demo.codingTest.TC2_GetServiceTestSingleRecord</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">GETServiceTestSingleRecord</span>
+                <span class="method-start">3113 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.madhub.demo.codingTest.TC3_GetServiceInvalidResource</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">GETServiceWithInvalidResource</span>
+                <span class="method-start">3322 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.madhub.demo.codingTest.TC4_PostServiceTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">GETServiceTest</span>
-                <span class="method-start">301 ms</span>
+                <span class="method-name">POSTServiceTest</span>
+                <span class="method-start">3523 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.madhub.demo.codingTest.TC5_PutServiceTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">PUTServiceTest</span>
+                <span class="method-start">4929 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.madhub.demo.codingTest.TC6_DeleteServiceTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">DeleteServiceTest</span>
+                <span class="method-start">5875 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">GetServiceLowerBoundaryCase</span>
+                <span class="method-start">6540 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">GetServiceUpperBoundaryCase</span>
+                <span class="method-start">6707 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

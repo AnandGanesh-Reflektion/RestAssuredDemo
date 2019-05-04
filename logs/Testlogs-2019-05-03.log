@@ -1,48 +1,48 @@
-00:13:33.832 [main] INFO  resources.Listeners - ======================================================
-00:13:33.835 [main] INFO  resources.Listeners - Begin Test Case: [GETServiceTest]
-00:13:33.835 [main] INFO  resources.Listeners - ======================================================
-00:13:33.835 [main] INFO  com.madhub.demo.codingTest.TC1_GetServiceTest - Test Specification:
- BaseURI = https://jsonplaceholder.typicode.com
-00:13:35.630 [main] INFO  core.ResponseValidators - Received Status Code = 200. Matches the Expected.
-00:13:35.630 [main] INFO  core.ResponseValidators - Received Status Code = 200. Matches the Expected.
-00:13:36.270 [main] INFO  core.ResponseValidators - Json Schema is as Expected.
-00:13:36.751 [main] INFO  core.ResponseValidators - Received Record count is = 100. Matches the Expectation of >= 100 
-00:13:36.752 [main] INFO  resources.Listeners - ======================================================
-00:13:36.752 [main] INFO  resources.Listeners - Passed Test Case: [GETServiceTest]
-00:13:36.752 [main] INFO  resources.Listeners - ======================================================
-00:13:36.754 [main] INFO  resources.Listeners - ======================================================
-00:13:36.754 [main] INFO  resources.Listeners - Begin Test Case: [GETServiceTestSingleRecord]
-00:13:36.755 [main] INFO  resources.Listeners - ======================================================
-00:13:36.955 [main] INFO  core.ResponseValidators - Received Status Code = 200. Matches the Expected.
-00:13:36.971 [main] INFO  core.ResponseValidators - Json Schema is as Expected.
-00:13:36.981 [main] INFO  core.ResponseValidators - Validation of response field "id" has Passed: Received value = 1 as Expected
-00:13:36.982 [main] INFO  resources.Listeners - ======================================================
-00:13:36.982 [main] INFO  resources.Listeners - Passed Test Case: [GETServiceTestSingleRecord]
-00:13:36.982 [main] INFO  resources.Listeners - ======================================================
-00:20:16.064 [main] INFO  resources.Listeners - ======================================================
-00:20:16.068 [main] INFO  resources.Listeners - Begin Test Case: [GETServiceTest]
-00:20:16.068 [main] INFO  resources.Listeners - ======================================================
-00:20:16.068 [main] INFO  com.madhub.demo.codingTest.TC1_GetServiceTest - Test Specification:
- BaseURI = https://jsonplaceholder.typicode.com
-00:20:17.790 [main] INFO  core.ResponseValidators - [Validating Status Code]: Received Status Code = 200. Matches the Expected.
-00:20:18.432 [main] INFO  core.ResponseValidators - [Validating Json Schema]: Json Schema is as expected.
-00:20:18.858 [main] INFO  core.ResponseValidators - [Validating Record Count]: Received Record count is = 100. Matches the Expectation of >= 100 
-00:20:18.859 [main] INFO  resources.Listeners - ======================================================
-00:20:18.859 [main] INFO  resources.Listeners - Passed Test Case: [GETServiceTest]
-00:20:18.859 [main] INFO  resources.Listeners - ======================================================
-00:20:18.862 [main] INFO  resources.Listeners - ======================================================
-00:20:18.862 [main] INFO  resources.Listeners - Begin Test Case: [GETServiceTestSingleRecord]
-00:20:18.862 [main] INFO  resources.Listeners - ======================================================
-00:20:19.047 [main] INFO  core.ResponseValidators - [Validating Status Code]: Received Status Code = 200. Matches the Expected.
-00:20:19.061 [main] INFO  core.ResponseValidators - [Validating Json Schema]: Json Schema is as Expected.
-00:20:19.072 [main] INFO  core.ResponseValidators - [Validating Response Field]: Validation of response field "id" has Passed: Received value = 1 as Expected
-00:20:19.073 [main] INFO  resources.Listeners - ======================================================
-00:20:19.073 [main] INFO  resources.Listeners - Passed Test Case: [GETServiceTestSingleRecord]
-00:20:19.073 [main] INFO  resources.Listeners - ======================================================
-00:30:07.259 [main] INFO  core.ResponseValidators - [Validating Status Code]: Received Status Code = 200. Matches the Expected.
-00:30:07.947 [main] INFO  core.ResponseValidators - [Validating Json Schema]: Json Schema is as Expected.
-00:30:07.947 [main] INFO  core.ResponseValidators - [Validating Record Count]: Received single record as expected
-00:30:08.306 [main] INFO  core.ResponseValidators - [Validating Response Field]: Validation of response field "id" has Passed: Received value = 2 as Expected
-00:48:58.608 [main] INFO  core.ResponseValidators - [Validating Status Code]: Received Status Code = 404. Matches the Expected.
-00:51:04.458 [main] ERROR core.ResponseValidators - [Validating Status Code]: Expected Status Code is = 200, Received Status Code is 404
-01:37:57.145 [main] ERROR com.madhub.demo.codingTest.TC4_PostServiceTest - [Validating the resource created by POST request]: Resource not created
+02:02:39.183 [main] INFO  core.ResponseValidators - [Validating Record Count]: Received Record count is = 100. Matches the Expectation of >= 100 
+02:02:39.197 [main] INFO  resources.Listeners - ======================================================
+02:02:39.198 [main] INFO  resources.Listeners - Passed Test Case: [GETServiceTest]
+02:02:39.198 [main] INFO  resources.Listeners - ======================================================
+02:02:39.200 [main] INFO  resources.Listeners - ======================================================
+02:02:39.200 [main] INFO  resources.Listeners - Begin Test Case: [GETServiceTestSingleRecord]
+02:02:39.200 [main] INFO  resources.Listeners - ======================================================
+02:02:39.372 [main] INFO  core.ResponseValidators - [Validating Status Code]: Received Status Code = 200. Matches the Expected.
+02:02:39.389 [main] INFO  core.ResponseValidators - [Validating Json Schema]: Json Schema is as Expected.
+02:02:39.389 [main] INFO  core.ResponseValidators - [Validating Record Count]: Received single record as expected
+02:02:39.406 [main] INFO  core.ResponseValidators - [Validating Response Field]: Validation of response field "id" has Passed: Received value = 1 as Expected
+02:02:39.407 [main] INFO  resources.Listeners - ======================================================
+02:02:39.407 [main] INFO  resources.Listeners - Passed Test Case: [GETServiceTestSingleRecord]
+02:02:39.407 [main] INFO  resources.Listeners - ======================================================
+02:02:39.409 [main] INFO  resources.Listeners - ======================================================
+02:02:39.409 [main] INFO  resources.Listeners - Begin Test Case: [GETServiceWithInvalidResource]
+02:02:39.409 [main] INFO  resources.Listeners - ======================================================
+02:02:39.608 [main] INFO  core.ResponseValidators - [Validating Status Code]: Received Status Code = 404. Matches the Expected.
+02:02:39.608 [main] INFO  resources.Listeners - ======================================================
+02:02:39.608 [main] INFO  resources.Listeners - Passed Test Case: [GETServiceWithInvalidResource]
+02:02:39.609 [main] INFO  resources.Listeners - ======================================================
+02:02:39.609 [main] INFO  resources.Listeners - ======================================================
+02:02:39.609 [main] INFO  resources.Listeners - Begin Test Case: [POSTServiceTest]
+02:02:39.609 [main] INFO  resources.Listeners - ======================================================
+02:02:40.355 [main] INFO  core.ResponseValidators - [Validating Status Code]: Received Status Code = 201. Matches the Expected.
+02:02:40.365 [main] INFO  core.ResponseValidators - [Validating Json Schema]: Json Schema is as expected.
+02:02:41.013 [main] ERROR core.ResponseValidators - [Validating the resource created by POST request]: Resource not created. Expected StatusCode is 200, Received is 404
+02:02:41.015 [main] INFO  resources.Listeners - ======================================================
+02:02:41.015 [main] INFO  resources.Listeners - Failed Test Case: [POSTServiceTest]
+02:02:41.015 [main] INFO  resources.Listeners - ======================================================
+02:02:41.015 [main] INFO  resources.Listeners - ======================================================
+02:02:41.015 [main] INFO  resources.Listeners - Begin Test Case: [PUTServiceTest]
+02:02:41.015 [main] INFO  resources.Listeners - ======================================================
+02:02:41.684 [main] INFO  core.ResponseValidators - [Validating Status Code]: Received Status Code = 200. Matches the Expected.
+02:02:41.693 [main] INFO  core.ResponseValidators - [Validating Json Schema]: Json Schema is as expected.
+02:02:41.960 [main] INFO  resources.Listeners - ======================================================
+02:02:41.960 [main] INFO  resources.Listeners - Failed Test Case: [PUTServiceTest]
+02:02:41.960 [main] INFO  resources.Listeners - ======================================================
+02:02:41.961 [main] INFO  resources.Listeners - ======================================================
+02:02:41.961 [main] INFO  resources.Listeners - Begin Test Case: [DeleteServiceTest]
+02:02:41.961 [main] INFO  resources.Listeners - ======================================================
+02:02:42.609 [main] INFO  core.ResponseValidators - [Validating Status Code]: Received Status Code = 200. Matches the Expected.
+02:02:42.625 [main] ERROR core.ResponseValidators - [Validating Json Schema]: Json Schema validation failed
+
+02:02:42.626 [main] INFO  resources.Listeners - ======================================================
+02:02:42.626 [main] INFO  resources.Listeners - Failed Test Case: [DeleteServiceTest]
+02:02:42.626 [main] INFO  resources.Listeners - ======================================================
+02:02:42.626 [main] INFO  resources.Listeners - ======================================================

@@ -13,15 +13,15 @@
  */
 package com.madhub.demo.codingTest;
 
+import java.util.HashMap;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import constants.Config;
 import constants.Constants;
 import core.ResponseValidators;
-import core.RestAssuredConfigurationBase;
 import core.RestAssuredHelpers;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -34,23 +34,47 @@ public class TC2_GetServiceTestSingleRecord
 
     ResponseValidators responseValidator = new ResponseValidators();
 
+    private String contentTypeHeaderKey;
+
+    private String contentTypeHeaderValue;
+
+    private String charsetHeaderKey;
+
+    private String charsetHeaderValue;
+
+    private String param;
+
+    public TC2_GetServiceTestSingleRecord()
+    {
+        this.contentTypeHeaderKey = "Content-Type";
+        this.contentTypeHeaderValue = "application/json";
+        this.charsetHeaderKey = "charset";
+        this.charsetHeaderValue = "UTF-8";
+        this.param = "1";
+    }
+
     @Test
     public void GETServiceTestSingleRecord()
     {
-        String input = "1";
-        RequestSpecification request = this.restHelpers.getRequestSpecification(Config.GET, null);
-        Response response = this.restHelpers.getResponse(Config.GET, request, Resource.readGetServiceResource(input));
-        System.out.println(response.getBody().asString());
+        //build headers used in the test case
+        HashMap<String, String> headers = new HashMap<String, String>();
+        headers.put(this.contentTypeHeaderKey, this.contentTypeHeaderValue);
+        headers.put(this.charsetHeaderKey, this.charsetHeaderValue);
+
+        RequestSpecification request = this.restHelpers.getRequestSpecification(null, headers);
+        Response response = this.restHelpers
+            .getResponse(Config.GET, request, Resource.readGetServiceResource(this.param));
+        //System.out.println(response.getBody().asString());
         this.responseValidator
-            .validateGetResponse(response, Constants.GET_STATUS_CODE, "JsonSchemaSingleRecord.json", "id", input);
+            .validateGetResponse(response, Constants.GET_STATUS_CODE, "JsonSchemaSingleRecord.json", "id", this.param);
 
     }
 
-    @BeforeTest
+    /*    @BeforeTest
     public void initialization()
     {
         RestAssuredConfigurationBase.initBaseURI();
-
+    
     }
-
+    */
 }

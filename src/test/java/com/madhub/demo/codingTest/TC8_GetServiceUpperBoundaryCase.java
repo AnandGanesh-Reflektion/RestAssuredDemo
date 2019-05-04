@@ -1,7 +1,7 @@
 /*
- * Class: TC1_GetServiceTests
+ * Class: TC7_GetServiceLowerBoundaryCase
  *
- * Created on May 1, 2019
+ * Created on May 5, 2019
  *
  * (c) Copyright Lam Research Corporation, unpublished work, created 2019
  * All use, disclosure, and/or reproduction of this material is prohibited
@@ -25,13 +25,12 @@ import constants.Constants;
 import core.ResponseValidators;
 import core.RestAssuredConfigurationBase;
 import core.RestAssuredHelpers;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class TC1_GetServiceTest extends RestAssuredConfigurationBase
+public class TC8_GetServiceUpperBoundaryCase
 {
-    public static Logger log = LogManager.getLogger(TC1_GetServiceTest.class.getName());
+    public static Logger log = LogManager.getLogger(TC8_GetServiceUpperBoundaryCase.class.getName());
 
     RestAssuredHelpers restHelpers = new RestAssuredHelpers();
 
@@ -45,40 +44,36 @@ public class TC1_GetServiceTest extends RestAssuredConfigurationBase
 
     private String charsetHeaderValue;
 
-    public TC1_GetServiceTest()
+    private String param;
+
+    public TC8_GetServiceUpperBoundaryCase()
     {
         this.contentTypeHeaderKey = "Content-Type";
         this.contentTypeHeaderValue = "application/json";
         this.charsetHeaderKey = "charset";
         this.charsetHeaderValue = "UTF-8";
+        this.param = "101";
     }
 
     @Test
-    public void GETServiceTest()
+    public void GetServiceUpperBoundaryCase()
     {
         //build headers used in the test case
         HashMap<String, String> headers = new HashMap<String, String>();
         headers.put(this.contentTypeHeaderKey, this.contentTypeHeaderValue);
         headers.put(this.charsetHeaderKey, this.charsetHeaderValue);
 
-        //log the baseURI used
-        TC1_GetServiceTest.log.info("Test Specification:\n BaseURI = " + RestAssured.baseURI);
-
-        //Create request specifications for the GET request
         RequestSpecification request = this.restHelpers.getRequestSpecification(null, headers);
-
-        //Execute the RestAPI to capture the response
-        Response response = this.restHelpers.getResponse(Config.GET, request, Resource.readGetServiceResource(null));
-
-        //Validate the response received fro API request
-        this.responseValidator.validateGetResponse(response, Constants.GET_STATUS_CODE, "JsonSchemaFullList.json", 100);
+        Response response = this.restHelpers
+            .getResponse(Config.GET, request, Resource.readGetServiceResource(this.param));
+        //System.out.println(response.getBody().asString());
+        this.responseValidator.validateGetResponse(response, Constants.ERROR_STATUS_CODE, null, -1);
 
     }
 
     @BeforeTest
     public void initialization()
     {
-        //Set the baseURI used in the API request
         RestAssuredConfigurationBase.initBaseURI();
 
     }

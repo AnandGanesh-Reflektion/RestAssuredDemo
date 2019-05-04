@@ -1,10 +1,13 @@
-01:57:41.350 [main] ERROR core.ResponseValidators - [Validating Response]: Received null response
-01:58:08.626 [main] ERROR core.ResponseValidators - [Validating Response]: Received null response
-02:00:31.518 [main] ERROR core.ResponseValidators - [Validating Response]: Received null response
-09:08:31.473 [main] ERROR core.ResponseValidators - [Validating Status Code]: Expected Status Code is = 404, Received Status Code is 200
-09:11:42.020 [main] ERROR core.ResponseValidators - [Validating Status Code]: Expected Status Code is = 404, Received Status Code is 200
-09:17:34.740 [main] ERROR core.ResponseValidators - [Validating Status Code]: Expected Status Code is = 404, Received Status Code is 200
-09:27:29.988 [main] ERROR core.ResponseValidators - [Validating Json Schema]: Json Schema validation failed
-
-09:28:02.256 [main] ERROR core.ResponseValidators - [Validating Json Schema]: Json Schema validation failed
-
+02:02:42.626 [main] INFO  resources.Listeners - Begin Test Case: [GetServiceLowerBoundaryCase]
+02:02:42.632 [main] INFO  resources.Listeners - ======================================================
+02:02:42.793 [main] INFO  core.ResponseValidators - [Validating Status Code]: Received Status Code = 404. Matches the Expected.
+02:02:42.793 [main] INFO  resources.Listeners - ======================================================
+02:02:42.793 [main] INFO  resources.Listeners - Passed Test Case: [GetServiceLowerBoundaryCase]
+02:02:42.793 [main] INFO  resources.Listeners - ======================================================
+02:02:42.794 [main] INFO  resources.Listeners - ======================================================
+02:02:42.794 [main] INFO  resources.Listeners - Begin Test Case: [GetServiceUpperBoundaryCase]
+02:02:42.794 [main] INFO  resources.Listeners - ======================================================
+02:02:42.965 [main] INFO  core.ResponseValidators - [Validating Status Code]: Received Status Code = 404. Matches the Expected.
+02:02:42.965 [main] INFO  resources.Listeners - ======================================================
+02:02:42.965 [main] INFO  resources.Listeners - Passed Test Case: [GetServiceUpperBoundaryCase]
+02:02:42.965 [main] INFO  resources.Listeners - ======================================================

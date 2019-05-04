@@ -13,9 +13,10 @@
  */
 package com.madhub.demo.codingTest;
 
+import java.util.HashMap;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -31,11 +32,29 @@ public class TC4_PostServiceTest
 {
     public static Logger log = LogManager.getLogger(TC4_PostServiceTest.class.getName());
 
-    public static int resourceId = -1;
+    //public static int resourceId = -1;
 
     RestAssuredHelpers restHelpers = new RestAssuredHelpers();
 
     ResponseValidators responseValidator = new ResponseValidators();
+
+    private String contentTypeHeaderKey;
+
+    private String contentTypeHeaderValue;
+
+    private String charsetHeaderKey;
+
+    private String charsetHeaderValue;
+
+    //HashMap<String, String> headers = new HashMap<String, String>();
+
+    public TC4_PostServiceTest()
+    {
+        this.contentTypeHeaderKey = "Content-Type";
+        this.contentTypeHeaderValue = "application/json";
+        this.charsetHeaderKey = "charset";
+        this.charsetHeaderValue = "UTF-8";
+    }
 
     @BeforeTest
     public void initialization()
@@ -47,33 +66,33 @@ public class TC4_PostServiceTest
     @Test
     public void POSTServiceTest()
     {
-        RequestSpecification request = this.restHelpers.getRequestSpecification(Config.POST, Payload.postPayload());
+        //build headers used in the test case
+        HashMap<String, String> headers = new HashMap<String, String>();
+        headers.put(this.contentTypeHeaderKey, this.contentTypeHeaderValue);
+        headers.put(this.charsetHeaderKey, this.charsetHeaderValue);
+
+        RequestSpecification request = this.restHelpers.getRequestSpecification(Payload.postPayload(), headers);
         Response response = this.restHelpers.getResponse(Config.POST, request, Resource.readGetServiceResource(null));
         //System.out.println(respone.asString());
         this.responseValidator
             .validateGetResponse(response, Constants.POST_STATUS_CODE, "JsonSchemaSingleRecord.json", -1);
-        TC4_PostServiceTest.resourceId = response.jsonPath().get("id");
+        // TC4_PostServiceTest.resourceId = response.jsonPath().get("id");
+
+        this.verifyRecordCreated(response.jsonPath().get("id"));
     }
 
-    @Test
-    public void verifyRecordCreated()
+    public void verifyRecordCreated(int resourceId)
     {
-        RequestSpecification request = this.restHelpers.getRequestSpecification(Config.GET, null);
-        Response response = this.restHelpers.getResponse(
-            Config.GET,
-            request,
-            Resource.readGetServiceResource(String.valueOf(TC4_PostServiceTest.resourceId)));
-        System.out.println("After resource creation=" + response.statusCode());
-        if (response.getStatusCode() == Constants.GET_STATUS_CODE)
-        {
-            TC4_PostServiceTest.log
-                .info("[Validating the resource created by POST request]: Resource created successfully");
-            Assert.assertTrue(Constants.BOOLEAN_TRUE);
-        }
-        else if (response.getStatusCode() == Constants.ERROR_STATUS_CODE)
-        {
-            TC4_PostServiceTest.log.error("[Validating the resource created by POST request]: Resource not created");
-            Assert.assertTrue(Constants.BOOLEAN_FALSE);
-        }
+        HashMap<String, String> headers = new HashMap<String, String>();
+        headers.put(this.contentTypeHeaderKey, this.contentTypeHeaderValue);
+        headers.put(this.charsetHeaderKey, this.charsetHeaderValue);
+
+        RequestSpecification request = this.restHelpers.getRequestSpecification(null, headers);
+
+        Response response = this.restHelpers
+            .getResponse(Config.GET, request, Resource.readGetServiceResource(String.valueOf(resourceId)));
+        //System.out.println("After resource creation=" + response.statusCode());
+        ResponseValidators.validateResourceCreated(response, Constants.GET_STATUS_CODE, true);
+
     }
 }

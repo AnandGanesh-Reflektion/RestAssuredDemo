@@ -13,18 +13,38 @@
  */
 package com.madhub.demo.codingTest;
 
+import org.json.simple.JSONObject;
+
+import resources.PayloadBuilder;
+
 public class Payload
 {
 
     public static String postPayload()
     {
+        JSONObject requestParam = new JSONObject();
+        /*        requestParam.put("id", payload.payload_id);
+        requestParam.put("title", payload.payload_title);
+        requestParam.put("body", payload.payload_body);
+        requestParam.put("userId", payload.payload_userId);
+        */
         String payload = "{" + "\"title\" : \"foo\" ," + "\"body\" : \"bar\" ," + "\"userId\" : 1" + "}";
         return payload;
     }
 
-    public static String putPayload()
+    public static String putPayload(PayloadBuilder payload)
     {
-        String payload = "{\r\n\"id\" : 1 ,\r\n\"title\" : \"abc\" ,\r\n\"body\" : \"xyz\" ,\r\n\"userId\" : 1\r\n}";
-        return payload;
+        /*String body = "{\r\n\"id\" : " + payload.payload_id + " ,\r\n\"title\" : \"" + payload.payload_title
+                + "\" ,\r\n\"body\" : \"" + payload.payload_body + "\" ,\r\n\"userId\" : " + payload.payload_userId
+                + "\r\n}";*/
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("id", payload.payload_id);
+        requestParam.put("title", payload.payload_title);
+        requestParam.put("body", payload.payload_body);
+        requestParam.put("userId", payload.payload_userId);
+        //System.out.println("PutPayloadBuilt=" + requestParam.toJSONString());
+        return requestParam.toJSONString();
+        //return body;
     }
+
 }

@@ -13,6 +13,8 @@
  */
 package core;
 
+import java.util.HashMap;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -67,24 +69,53 @@ public class RestAssuredHelpers extends RestAssuredConfigurationBase
 
     }
     */
-    public RequestSpecification getRequestSpecification(String httpRquestType, String Payload)
+
+    /*public RequestSpecification getRequestSpecification(
+        String httpRquestType,
+        String Payload,
+        HashMap<String, String> headers)*/
+    public RequestSpecification getRequestSpecification(String Payload, HashMap<String, String> headers)
     {
-        if (httpRquestType.equalsIgnoreCase("GET"))
+
+        this.request = RestAssured.given();
+        if (headers != null)
+        {
+            this.request.headers(headers);
+        }
+        if (Payload != null)
+        {
+            this.request.body(Payload);
+        }
+        this.request.log().all();
+        return this.request;
+        /* if (httpRquestType.equalsIgnoreCase("GET"))
         {
             this.request = RestAssured.given();
             this.request.header(this.contentTypeHeaderKey, this.contentTypeHeaderValue);
             this.request.header(this.charsetHeaderKey, this.charsetHeaderValue);
+            this.request.log().all();
+            this.request = RestAssured.given();
+            this.request.headers(headers);
             this.request.log().all();
         }
         else if (httpRquestType.equalsIgnoreCase("POST") || httpRquestType.equalsIgnoreCase("PUT"))
         {
-            this.request = RestAssured.given();
+             this.request = RestAssured.given();
             this.request.header(this.contentTypeHeaderKey, this.contentTypeHeaderValue);
             this.request.header(this.charsetHeaderKey, this.charsetHeaderValue);
             this.request.body(Payload);
             this.request.log().all();
+            this.request = RestAssured.given();
+            this.request.headers(headers);
+            this.request.body(Payload);
+            this.request.log().all();
         }
-        return this.request;
+        else if (httpRquestType.equalsIgnoreCase("DELETE"))
+        {
+            this.request = RestAssured.given();
+            this.request.headers(headers);
+            this.request.log().all();
+        }*/
 
     }
 
@@ -92,15 +123,28 @@ public class RestAssuredHelpers extends RestAssuredConfigurationBase
     {
         if (httpRquestType.equalsIgnoreCase("GET"))
         {
-
             this.response = request.get(resource);
             RestAssuredHelpers.log.debug("Response Logging :\n" + this.response.asString());
+            this.response.then().log().all();
 
         }
         else if (httpRquestType.equalsIgnoreCase("POST"))
         {
             this.response = request.post(resource);
             RestAssuredHelpers.log.debug("Response Logging :\n" + this.response.asString());
+            this.response.then().log().all();
+        }
+        else if (httpRquestType.equalsIgnoreCase("PUT"))
+        {
+            this.response = request.put(resource);
+            RestAssuredHelpers.log.debug("Response Logging :\n" + this.response.asString());
+            this.response.then().log().all();
+        }
+        else if (httpRquestType.equalsIgnoreCase("DELETE"))
+        {
+            this.response = request.delete(resource);
+            RestAssuredHelpers.log.debug("Response Logging :\n" + this.response.asString());
+            this.response.then().log().all();
         }
         return this.response;
 

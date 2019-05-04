@@ -21,14 +21,71 @@ import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import junit.framework.Assert;
+import resources.ResponsePojo;
 import utils.TestUtils;
 
 public class ResponseValidators
 {
     public static Logger log = LogManager.getLogger(ResponseValidators.class.getName());
 
+    public static void validateResourceCreated(Response response, int statusCode, boolean created)
+    {
+        if (created == Constants.BOOLEAN_TRUE)
+        {
+            try
+            {
+                Assert.assertEquals(statusCode, response.getStatusCode());
+                ResponseValidators.log
+                    .info("[Validating the resource created by POST request]: Resource created successfully");
+            }
+            catch (Throwable t)
+            {
+                ResponseValidators.log.error(
+                    "[Validating the resource created by POST request]: Resource not created. Expected StatusCode is "
+                            + statusCode + ", Received is " + response.getStatusCode());
+                Assert.fail(
+                    "[Validating the resource created by POST request]: Resource not created. [Status Code Validation]: "
+                            + t);
+            }
+        }
+    }
+
+    public void compareResponseData(Response expectedResponse, Response receivedResponse)
+    {
+        ResponsePojo expectedBody = expectedResponse.getBody().as(ResponsePojo.class);
+        ResponsePojo receivedBody = receivedResponse.getBody().as(ResponsePojo.class);
+        //Assert.assertTrue(expectedBody.equals(receivedBody));
+
+        if (!(expectedBody.id == receivedBody.id))
+        {
+            Assert.fail(
+                "[Validting Newly Created/Updated Resource]: \"id\" value is not as expected.  Value requested ="
+                        + expectedBody.id + ", but received=" + receivedBody.id);
+        }
+        if (!(expectedBody.title == receivedBody.title))
+        {
+            Assert.fail(
+                "[Validting Newly Created/Updated Resource]: \"title\" value is not as expected.  Value requested ="
+                        + expectedBody.title + ", but received=" + receivedBody.title);
+        }
+        if (!(expectedBody.body == receivedBody.body))
+        {
+            Assert.fail(
+                "[Validting Newly Created/Updated Resource]: \"body\" value is not as expected.  Value requested ="
+                        + expectedBody.body + ", but received=" + receivedBody.body);
+        }
+        if (!(expectedBody.userId == receivedBody.userId))
+        {
+            Assert.fail(
+                "[Validting Newly Created/Updated Resource]: \"userId\" value is not as expected.  Value requested ="
+                        + expectedBody.userId + ", but received=" + receivedBody.userId);
+        }
+
+    }
+
     public void validateGetResponse(Response res, int statusCode, String schemaFile, int recordCount)
     {
+
         //Validate the Response statuscode
         if (res != null)
         {
@@ -55,6 +112,7 @@ public class ResponseValidators
             }
 
             //Validate the Response Schema
+            //res.then().assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath(schemaFile));
             if (schemaFile != null)
             {
                 try
@@ -66,7 +124,7 @@ public class ResponseValidators
                 {
                     ResponseValidators.log.error("[Validating Json Schema]: Json Schema validation failed\n");
                     ResponseValidators.log.debug("Json schema validation error:\n" + t);
-                    Assert.fail("[Validating Json Schema]: Json Schema validation failed");
+                    Assert.fail("[Validating Json Schema]: Json Schema validation failed. \n" + t.getMessage());
                 }
             }
 
@@ -172,4 +230,5 @@ public class ResponseValidators
             Assert.fail("[Validating Response]: Received null response");
         }
     }
+
 }

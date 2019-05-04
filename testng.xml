@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" >
+<suite name="Suite">
 <listeners>
         <listener class-name="resources.Listeners" />
         <listener class-name="resources.ExtentReporterNG"></listener>
@@ -11,6 +11,10 @@
       <class name="com.madhub.demo.codingTest.TC2_GetServiceTestSingleRecord"/>
       <class name="com.madhub.demo.codingTest.TC3_GetServiceInvalidResource"/>
       <class name="com.madhub.demo.codingTest.TC4_PostServiceTest"/>
+      <class name="com.madhub.demo.codingTest.TC5_PutServiceTest"/>
+      <class name="com.madhub.demo.codingTest.TC6_DeleteServiceTest"/>
+      <class name="com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase"/>
+      <class name="com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

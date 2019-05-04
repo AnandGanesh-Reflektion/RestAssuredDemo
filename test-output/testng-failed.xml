@@ -8,13 +8,47 @@
   <test name="Test">
     <classes>
       <class name="com.madhub.demo.codingTest.TC1_GetServiceTest"/>
+      <class name="com.madhub.demo.codingTest.TC2_GetServiceTestSingleRecord"/>
+      <class name="com.madhub.demo.codingTest.TC3_GetServiceInvalidResource"/>
+      <class name="com.madhub.demo.codingTest.TC4_PostServiceTest"/>
+      <class name="com.madhub.demo.codingTest.TC5_PutServiceTest"/>
+      <class name="com.madhub.demo.codingTest.TC6_DeleteServiceTest"/>
+      <class name="com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase"/>
+      <class name="com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase"/>
     </classes>
   </test> <!-- Test -->
   <test name="Test(failed)">
     <classes>
+      <class name="com.madhub.demo.codingTest.TC5_PutServiceTest">
+        <methods>
+          <include name="PUTServiceTest"/>
+          <include name="initialization"/>
+        </methods>
+      </class> <!-- com.madhub.demo.codingTest.TC5_PutServiceTest -->
+      <class name="com.madhub.demo.codingTest.TC6_DeleteServiceTest">
+        <methods>
+          <include name="initialization"/>
+          <include name="DeleteServiceTest"/>
+        </methods>
+      </class> <!-- com.madhub.demo.codingTest.TC6_DeleteServiceTest -->
+      <class name="com.madhub.demo.codingTest.TC4_PostServiceTest">
+        <methods>
+          <include name="POSTServiceTest"/>
+          <include name="initialization"/>
+        </methods>
+      </class> <!-- com.madhub.demo.codingTest.TC4_PostServiceTest -->
+      <class name="com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase">
+        <methods>
+          <include name="initialization"/>
+        </methods>
+      </class> <!-- com.madhub.demo.codingTest.TC8_GetServiceUpperBoundaryCase -->
+      <class name="com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase">
+        <methods>
+          <include name="initialization"/>
+        </methods>
+      </class> <!-- com.madhub.demo.codingTest.TC7_GetServiceLowerBoundaryCase -->
       <class name="com.madhub.demo.codingTest.TC1_GetServiceTest">
         <methods>
-          <include name="GETServiceTest"/>
           <include name="initialization"/>
         </methods>
       </class> <!-- com.madhub.demo.codingTest.TC1_GetServiceTest -->
