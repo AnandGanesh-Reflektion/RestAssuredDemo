@@ -20,6 +20,12 @@ import com.madhub.demo.constants.Constants;
 
 public class PropertiesUtility
 {
+    /**
+     * @author madhub
+     * This will read the properties file and retrive the requested property value
+     * @param key
+     * @return
+     */
     public static String readProperty(String key)
     {
         Properties prop = new Properties();

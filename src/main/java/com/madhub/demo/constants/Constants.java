@@ -13,10 +13,6 @@
  */
 package com.madhub.demo.constants;
 
-/**
- * @author MadhuB
- * This class helps in containing all the required com.madhub.demo.constants.
- */
 public class Constants
 {
     public static final String ROOT_DIRECTORY = System.getProperty("user.dir");

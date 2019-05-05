@@ -42,6 +42,10 @@ public class TC3_GetServiceInvalidResource
 
     private String charsetHeaderValue;
 
+    /**
+     * @author madhub
+     * Contructor to build the data used in Test case
+     */
     public TC3_GetServiceInvalidResource()
     {
         this.contentTypeHeaderKey = "Content-Type";
@@ -50,6 +54,10 @@ public class TC3_GetServiceInvalidResource
         this.charsetHeaderValue = "UTF-8";
     }
 
+    /**
+     * @author madhub
+     * This will validate the GET service of API for the invalid record
+     */
     @Test
     public void GETServiceWithInvalidResource()
     {
@@ -63,10 +71,4 @@ public class TC3_GetServiceInvalidResource
         this.responseValidator.validateGetResponse(response, 404, null, -1);
     }
 
-    /*    @BeforeTest
-    public void initialization()
-    {
-        RestAssuredConfigurationBase.initBaseURI();
-    
-    }*/
 }

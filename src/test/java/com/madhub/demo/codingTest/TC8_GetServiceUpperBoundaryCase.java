@@ -17,13 +17,11 @@ import java.util.HashMap;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.madhub.demo.constants.Config;
 import com.madhub.demo.constants.Constants;
 import com.madhub.demo.core.ResponseValidators;
-import com.madhub.demo.core.RestAssuredConfigurationBase;
 import com.madhub.demo.core.RestAssuredHelpers;
 
 import io.restassured.response.Response;
@@ -47,6 +45,10 @@ public class TC8_GetServiceUpperBoundaryCase
 
     private String param;
 
+    /**
+     * @author madhub
+     * Contructor to build the data used in Test case
+     */
     public TC8_GetServiceUpperBoundaryCase()
     {
         this.contentTypeHeaderKey = "Content-Type";
@@ -56,6 +58,10 @@ public class TC8_GetServiceUpperBoundaryCase
         this.param = "101";
     }
 
+    /**
+     * @author madhub
+     * This will validate the Upper Boundary case with GET service of the API
+     */
     @Test
     public void GetServiceUpperBoundaryCase()
     {
@@ -69,13 +75,6 @@ public class TC8_GetServiceUpperBoundaryCase
             .getResponse(Config.GET, request, Resource.readGetServiceResource(this.param));
         //System.out.println(response.getBody().asString());
         this.responseValidator.validateGetResponse(response, Constants.ERROR_STATUS_CODE, null, -1);
-
-    }
-
-    @BeforeTest
-    public void initialization()
-    {
-        RestAssuredConfigurationBase.initBaseURI();
 
     }
 }

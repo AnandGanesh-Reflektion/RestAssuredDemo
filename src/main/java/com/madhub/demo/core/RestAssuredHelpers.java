@@ -26,54 +26,17 @@ public class RestAssuredHelpers extends RestAssuredConfigurationBase
 {
     public static Logger log = LogManager.getLogger(RestAssuredHelpers.class.getName());
 
-    private String contentTypeHeaderKey;
-
-    private String contentTypeHeaderValue;
-
-    private String charsetHeaderKey;
-
-    private String charsetHeaderValue;
-
     Response response;
 
     RequestSpecification request;
 
-    public RestAssuredHelpers()
-    {
-        this.contentTypeHeaderKey = "Content-Type";
-        this.contentTypeHeaderValue = "application/json";
-        this.charsetHeaderKey = "charset";
-        this.charsetHeaderValue = "UTF-8";
-    }
-
-    /* public Response executeRestAssuredAPI(String httpRquestType, String resourcePath, String requestBody)
-            throws URISyntaxException
-    {
-
-        if (httpRquestType.equalsIgnoreCase("GET"))
-        {
-             RequestSpecification request = RestAssured.given();
-            request.header(this.contentTypeHeaderKey, this.contentTypeHeaderValue);
-            request.header(this.charsetHeaderKey, this.charsetHeaderValue);
-            return request;
-            this.response = RestAssured.given().header(this.contentTypeHeaderKey, this.contentTypeHeaderValue)
-                .header(this.charsetHeaderKey, this.charsetHeaderValue).when()
-                .get(new URI(RestAssuredConfigurationBase.baseURI + resourcePath)).then().extract().response();
-            return this.response;
-        }
-        else if (httpRquestType.equalsIgnoreCase("POST"))
-        {
-
-        }
-        return this.response;
-
-    }
-    */
-
-    /*public RequestSpecification getRequestSpecification(
-        String httpRquestType,
-        String Payload,
-        HashMap<String, String> headers)*/
+    /**
+     * @author madhub
+     * This method will build the request specification for API execution
+     * @param Payload
+     * @param headers
+     * @return
+     */
     public RequestSpecification getRequestSpecification(String Payload, HashMap<String, String> headers)
     {
 
@@ -88,37 +51,16 @@ public class RestAssuredHelpers extends RestAssuredConfigurationBase
         }
         this.request.log().all();
         return this.request;
-        /* if (httpRquestType.equalsIgnoreCase("GET"))
-        {
-            this.request = RestAssured.given();
-            this.request.header(this.contentTypeHeaderKey, this.contentTypeHeaderValue);
-            this.request.header(this.charsetHeaderKey, this.charsetHeaderValue);
-            this.request.log().all();
-            this.request = RestAssured.given();
-            this.request.headers(headers);
-            this.request.log().all();
-        }
-        else if (httpRquestType.equalsIgnoreCase("POST") || httpRquestType.equalsIgnoreCase("PUT"))
-        {
-             this.request = RestAssured.given();
-            this.request.header(this.contentTypeHeaderKey, this.contentTypeHeaderValue);
-            this.request.header(this.charsetHeaderKey, this.charsetHeaderValue);
-            this.request.body(Payload);
-            this.request.log().all();
-            this.request = RestAssured.given();
-            this.request.headers(headers);
-            this.request.body(Payload);
-            this.request.log().all();
-        }
-        else if (httpRquestType.equalsIgnoreCase("DELETE"))
-        {
-            this.request = RestAssured.given();
-            this.request.headers(headers);
-            this.request.log().all();
-        }*/
-
     }
 
+    /**
+     * @author madhub
+     * This method will retrive the response received from API call
+     * @param httpRquestType
+     * @param request
+     * @param resource
+     * @return
+     */
     public Response getResponse(String httpRquestType, RequestSpecification request, String resource)
     {
         if (httpRquestType.equalsIgnoreCase("GET"))

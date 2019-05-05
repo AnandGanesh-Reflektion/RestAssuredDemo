@@ -15,12 +15,24 @@ package com.madhub.demo.codingTest;
 
 public class Resource
 {
+    /**
+     * @author madhub
+     * This method will contruct resource for the API request
+     * @return
+     */
     public static String readGetServiceInvalidResource()
     {
         String resource = "/invalidposts";
         return resource;
     }
 
+    /**
+     * @author madhub
+     * This method will contruct resource for the API request
+     *
+     * @param input
+     * @return
+     */
     public static String readGetServiceResource(String input)
     {
         String resource;

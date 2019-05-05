@@ -23,15 +23,22 @@ public class Listeners implements ITestListener
 {
     public static Logger log = LogManager.getLogger(Listeners.class.getName());
 
-    public void onFinish(ITestContext arg0)
+    public void onFinish(ITestContext context)
     {
         // TODO Auto-generated method stub
+        Listeners.log.info("======================================================");
+        Listeners.log.info("End Test Suite: [" + context.getName() + "]");
+        Listeners.log.info("======================================================");
 
     }
 
-    public void onStart(ITestContext arg0)
+    public void onStart(ITestContext context)
     {
         // TODO Auto-generated method stub
+        //log the baseURI used
+        Listeners.log.info("======================================================");
+        Listeners.log.info("Begin Test Suite: [" + context.getName() + "]");
+        Listeners.log.info("======================================================");
 
     }
 

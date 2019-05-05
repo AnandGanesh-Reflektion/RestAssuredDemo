@@ -27,11 +27,14 @@ public class RestAssuredConfigurationBase
 
     // public static String baseURI = null;
 
+    /**
+     * @author madhub
+     * This method will initialize RestAssured base URI
+     */
     public static void initBaseURI()
     {
         String protocol = PropertiesUtility.readProperty(Config.PROTOCOL);
         String host = PropertiesUtility.readProperty(Config.HOST);
-        //  RestAssuredConfigurationBase.baseURI = protocol + "://" + host;
         RestAssured.baseURI = protocol + "://" + host;
 
     }

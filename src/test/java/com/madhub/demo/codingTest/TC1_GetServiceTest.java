@@ -25,6 +25,7 @@ import com.madhub.demo.constants.Constants;
 import com.madhub.demo.core.ResponseValidators;
 import com.madhub.demo.core.RestAssuredConfigurationBase;
 import com.madhub.demo.core.RestAssuredHelpers;
+import com.madhub.demo.testng.Listeners;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -46,6 +47,10 @@ public class TC1_GetServiceTest extends RestAssuredConfigurationBase
 
     private String charsetHeaderValue;
 
+    /**
+     * @author madhub
+     * Contructor to build the data used in Test case
+     */
     public TC1_GetServiceTest()
     {
         this.contentTypeHeaderKey = "Content-Type";
@@ -54,6 +59,10 @@ public class TC1_GetServiceTest extends RestAssuredConfigurationBase
         this.charsetHeaderValue = "UTF-8";
     }
 
+    /**
+     * @author madhub
+     * Tests the GET service provided by API
+     */
     @Test
     public void GETServiceTest()
     {
@@ -61,9 +70,6 @@ public class TC1_GetServiceTest extends RestAssuredConfigurationBase
         HashMap<String, String> headers = new HashMap<String, String>();
         headers.put(this.contentTypeHeaderKey, this.contentTypeHeaderValue);
         headers.put(this.charsetHeaderKey, this.charsetHeaderValue);
-
-        //log the baseURI used
-        TC1_GetServiceTest.log.info("Test Specification:\n BaseURI = " + RestAssured.baseURI);
 
         //Create request specifications for the GET request
         RequestSpecification request = this.restHelpers.getRequestSpecification(null, headers);
@@ -76,11 +82,16 @@ public class TC1_GetServiceTest extends RestAssuredConfigurationBase
 
     }
 
+    /**
+     * @author madhub
+     * This will initialize the base URI for test case
+     */
     @BeforeTest
     public void initialization()
     {
         //Set the baseURI used in the API request
         RestAssuredConfigurationBase.initBaseURI();
+        Listeners.log.info("Test Specification:\n BaseURI = " + RestAssured.baseURI);
 
     }
 }

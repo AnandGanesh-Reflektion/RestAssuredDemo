@@ -18,6 +18,11 @@ import io.restassured.response.Response;
 
 public class TestUtils
 {
+    /**
+     * This will retrive the JsonPath mapping for the API response
+     * @param res
+     * @return
+     */
     public static JsonPath rawToJson(Response res)
     {
         String response = res.asString();

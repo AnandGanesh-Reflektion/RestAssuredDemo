@@ -30,6 +30,8 @@ public class ResponseValidators
     public static Logger log = LogManager.getLogger(ResponseValidators.class.getName());
 
     /**
+     * @author madhub
+     * This method is used to validate the API response for statuscode and newly created resource.
      * @param response
      * @param statusCode
      * @param created
@@ -57,7 +59,8 @@ public class ResponseValidators
     }
 
     /**
-     * this will compare response data
+     * @author madhub
+     * This will compare API response data
      *
      * @param expectedResponse expected response
      * @param receivedResponse
@@ -96,6 +99,9 @@ public class ResponseValidators
     }
 
     /**
+     * @author madhub
+     * This method will validate the API response for expected status code, JSON Schema & record count.
+     *
      * @param res
      * @param statusCode
      * @param schemaFile
@@ -178,6 +184,15 @@ public class ResponseValidators
         }
     }
 
+    /**
+     * @author madhub
+     * This method will validate the API response for expected status code, JSON Schema & particular key in response.
+     * @param res
+     * @param statusCode
+     * @param schemaFile
+     * @param field
+     * @param expectedFieldValue
+     */
     public void validateGetResponse(
         Response res,
         int statusCode,

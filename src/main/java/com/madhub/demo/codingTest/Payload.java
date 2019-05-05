@@ -21,6 +21,13 @@ import com.madhub.demo.helpers.PayloadBuilder;
 public class Payload
 {
 
+    /**
+     * @author madhub
+     * This method will contruct payload for the API POST request
+     *
+     * @param payload
+     * @return
+     */
     public static String postPayload(POSTPayloadBuilder payload)
     {
         JSONObject requestParam = new JSONObject();
@@ -34,6 +41,13 @@ public class Payload
         return payload;*/
     }
 
+    /**
+     * @author madhub
+     * This method will contruct payload for the API POST request
+     *
+     * @param payload
+     * @return
+     */
     public static String putPayload(PayloadBuilder payload)
     {
         /*String body = "{\r\n\"id\" : " + payload.payload_id + " ,\r\n\"title\" : \"" + payload.payload_title

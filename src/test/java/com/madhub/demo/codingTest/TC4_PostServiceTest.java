@@ -17,13 +17,11 @@ import java.util.HashMap;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.madhub.demo.constants.Config;
 import com.madhub.demo.constants.Constants;
 import com.madhub.demo.core.ResponseValidators;
-import com.madhub.demo.core.RestAssuredConfigurationBase;
 import com.madhub.demo.core.RestAssuredHelpers;
 import com.madhub.demo.helpers.POSTPayloadBuilder;
 
@@ -33,8 +31,6 @@ import io.restassured.specification.RequestSpecification;
 public class TC4_PostServiceTest
 {
     public static Logger log = LogManager.getLogger(TC4_PostServiceTest.class.getName());
-
-    //public static int resourceId = -1;
 
     RestAssuredHelpers restHelpers = new RestAssuredHelpers();
 
@@ -50,6 +46,10 @@ public class TC4_PostServiceTest
 
     POSTPayloadBuilder payload = new POSTPayloadBuilder();
 
+    /**
+     * @author madhub
+     * Contructor to build the data used in Test case
+     */
     public TC4_PostServiceTest()
     {
         this.contentTypeHeaderKey = "Content-Type";
@@ -61,13 +61,10 @@ public class TC4_PostServiceTest
         this.payload.payload_userId = 1;
     }
 
-    @BeforeTest
-    public void initialization()
-    {
-        RestAssuredConfigurationBase.initBaseURI();
-
-    }
-
+    /**
+     *@author madhub
+     *This will validate the POST service of the API
+     */
     @Test
     public void POSTServiceTest()
     {

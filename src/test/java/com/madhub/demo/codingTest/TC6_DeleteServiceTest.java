@@ -15,13 +15,11 @@ package com.madhub.demo.codingTest;
 
 import java.util.HashMap;
 
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.madhub.demo.constants.Config;
 import com.madhub.demo.constants.Constants;
 import com.madhub.demo.core.ResponseValidators;
-import com.madhub.demo.core.RestAssuredConfigurationBase;
 import com.madhub.demo.core.RestAssuredHelpers;
 
 import io.restassured.response.Response;
@@ -43,6 +41,10 @@ public class TC6_DeleteServiceTest
 
     private String param;
 
+    /**
+     * @author madhub
+     * Contructor to build the data used in Test case
+     */
     public TC6_DeleteServiceTest()
     {
         this.contentTypeHeaderKey = "Content-Type";
@@ -52,6 +54,10 @@ public class TC6_DeleteServiceTest
         this.param = "1";
     }
 
+    /**
+     * @author madhub
+     * This will validate the DELETE service of the API
+     */
     @Test
     public void DeleteServiceTest()
     {
@@ -67,13 +73,6 @@ public class TC6_DeleteServiceTest
 
         this.responseValidator
             .validateGetResponse(response, Constants.GET_STATUS_CODE, "JsonSchemaSingleRecord.json", -1);
-    }
-
-    @BeforeTest
-    public void initialization()
-    {
-        RestAssuredConfigurationBase.initBaseURI();
-
     }
 
 }

@@ -15,13 +15,11 @@ package com.madhub.demo.codingTest;
 
 import java.util.HashMap;
 
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.madhub.demo.constants.Config;
 import com.madhub.demo.constants.Constants;
 import com.madhub.demo.core.ResponseValidators;
-import com.madhub.demo.core.RestAssuredConfigurationBase;
 import com.madhub.demo.core.RestAssuredHelpers;
 import com.madhub.demo.helpers.PayloadBuilder;
 
@@ -54,6 +52,10 @@ public class TC5_PutServiceTest
 
     PayloadBuilder payload = new PayloadBuilder();;
 
+    /**
+     * @author madhub
+     * Contructor to build the data used in Test case
+     */
     public TC5_PutServiceTest()
     {
         this.contentTypeHeaderKey = "Content-Type";
@@ -61,17 +63,12 @@ public class TC5_PutServiceTest
         this.charsetHeaderKey = "charset";
         this.charsetHeaderValue = "UTF-8";
         this.param = "1";
-        // this.payload
 
         this.payload.payload_id = 1;
         this.payload.payload_title = "abc";
         this.payload.payload_body = "xyz";
         this.payload.payload_userId = 1;
 
-        /*this.payload_id = 1;
-        this.payload_title = "abc";
-        this.payload_body = "xyz";
-        this.payload_userId = 1;*/
     }
 
     public Response getUpdatedResourceAfterPUT()
@@ -90,13 +87,10 @@ public class TC5_PutServiceTest
 
     }
 
-    @BeforeTest
-    public void initialization()
-    {
-        RestAssuredConfigurationBase.initBaseURI();
-
-    }
-
+    /**
+     * @author madhub
+     * This will validate the PUT service of the API
+     */
     @Test
     public void PUTServiceTest()
     {

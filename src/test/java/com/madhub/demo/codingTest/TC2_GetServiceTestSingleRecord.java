@@ -45,6 +45,10 @@ public class TC2_GetServiceTestSingleRecord
 
     private String param;
 
+    /**
+     * @author madhub
+     * Contructor to build the data used in Test case
+     */
     public TC2_GetServiceTestSingleRecord()
     {
         this.contentTypeHeaderKey = "Content-Type";
@@ -54,6 +58,10 @@ public class TC2_GetServiceTestSingleRecord
         this.param = "1";
     }
 
+    /**
+     * @author madhub
+     * This will validate the GET service of API for the particular record
+     */
     @Test
     public void GETServiceTestSingleRecord()
     {
@@ -71,11 +79,4 @@ public class TC2_GetServiceTestSingleRecord
 
     }
 
-    /*    @BeforeTest
-    public void initialization()
-    {
-        RestAssuredConfigurationBase.initBaseURI();
-    
-    }
-    */
 }

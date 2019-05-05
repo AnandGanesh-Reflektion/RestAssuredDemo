@@ -17,13 +17,11 @@ import java.util.HashMap;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.madhub.demo.constants.Config;
 import com.madhub.demo.constants.Constants;
 import com.madhub.demo.core.ResponseValidators;
-import com.madhub.demo.core.RestAssuredConfigurationBase;
 import com.madhub.demo.core.RestAssuredHelpers;
 
 import io.restassured.response.Response;
@@ -47,6 +45,10 @@ public class TC7_GetServiceLowerBoundaryCase
 
     private String param;
 
+    /**
+     * @author madhub
+     * Contructor to build the data used in Test case
+     */
     public TC7_GetServiceLowerBoundaryCase()
     {
         this.contentTypeHeaderKey = "Content-Type";
@@ -56,6 +58,10 @@ public class TC7_GetServiceLowerBoundaryCase
         this.param = "0";
     }
 
+    /**
+     * @author madhub
+     * This will validate the Lower boundary case with GET service of the API
+     */
     @Test
     public void GetServiceLowerBoundaryCase()
     {
@@ -72,10 +78,4 @@ public class TC7_GetServiceLowerBoundaryCase
 
     }
 
-    @BeforeTest
-    public void initialization()
-    {
-        RestAssuredConfigurationBase.initBaseURI();
-
-    }
 }
