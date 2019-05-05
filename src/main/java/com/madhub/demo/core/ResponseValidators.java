@@ -11,23 +11,29 @@
  * 4000 N. First Street
  * San Jose, CA
  */
-package core;
+package com.madhub.demo.core;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import constants.Constants;
+import com.madhub.demo.constants.Constants;
+import com.madhub.demo.helpers.ResponsePojo;
+import com.madhub.demo.utils.TestUtils;
+
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import junit.framework.Assert;
-import resources.ResponsePojo;
-import utils.TestUtils;
 
 public class ResponseValidators
 {
     public static Logger log = LogManager.getLogger(ResponseValidators.class.getName());
 
+    /**
+     * @param response
+     * @param statusCode
+     * @param created
+     */
     public static void validateResourceCreated(Response response, int statusCode, boolean created)
     {
         if (created == Constants.BOOLEAN_TRUE)
@@ -50,6 +56,12 @@ public class ResponseValidators
         }
     }
 
+    /**
+     * this will compare response data
+     *
+     * @param expectedResponse expected response
+     * @param receivedResponse
+     */
     public void compareResponseData(Response expectedResponse, Response receivedResponse)
     {
         ResponsePojo expectedBody = expectedResponse.getBody().as(ResponsePojo.class);
@@ -83,6 +95,12 @@ public class ResponseValidators
 
     }
 
+    /**
+     * @param res
+     * @param statusCode
+     * @param schemaFile
+     * @param recordCount
+     */
     public void validateGetResponse(Response res, int statusCode, String schemaFile, int recordCount)
     {
 

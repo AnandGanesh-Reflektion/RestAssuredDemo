@@ -11,17 +11,17 @@
  * 4000 N. First Street
  * San Jose, CA
  */
-package constants;
+package com.madhub.demo.constants;
 
 /**
  * @author MadhuB
- * This class helps in containing all the required constants.
+ * This class helps in containing all the required com.madhub.demo.constants.
  */
 public class Constants
 {
     public static final String ROOT_DIRECTORY = System.getProperty("user.dir");
 
-    public static final String ENV_PROPERTIES_FILE_LOCATION = "/src/main/java/resources/env.properties";
+    public static final String ENV_PROPERTIES_FILE_LOCATION = "/src/main/resources/env.properties";
 
     public static final boolean BOOLEAN_TRUE = true;
 

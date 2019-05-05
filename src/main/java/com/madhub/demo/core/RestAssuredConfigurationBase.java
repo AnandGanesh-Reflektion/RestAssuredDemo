@@ -11,14 +11,15 @@
  * 4000 N. First Street
  * San Jose, CA
  */
-package core;
+package com.madhub.demo.core;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import constants.Config;
+import com.madhub.demo.constants.Config;
+import com.madhub.demo.utils.PropertiesUtility;
+
 import io.restassured.RestAssured;
-import utils.PropertiesUtility;
 
 public class RestAssuredConfigurationBase
 {

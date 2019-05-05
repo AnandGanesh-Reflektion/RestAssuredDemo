@@ -11,7 +11,7 @@
  * 4000 N. First Street
  * San Jose, CA
  */
-package core;
+package com.madhub.demo.core;
 
 import java.util.HashMap;
 

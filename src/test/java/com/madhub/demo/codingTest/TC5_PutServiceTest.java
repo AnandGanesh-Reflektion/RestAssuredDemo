@@ -18,14 +18,15 @@ import java.util.HashMap;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import constants.Config;
-import constants.Constants;
-import core.ResponseValidators;
-import core.RestAssuredConfigurationBase;
-import core.RestAssuredHelpers;
+import com.madhub.demo.constants.Config;
+import com.madhub.demo.constants.Constants;
+import com.madhub.demo.core.ResponseValidators;
+import com.madhub.demo.core.RestAssuredConfigurationBase;
+import com.madhub.demo.core.RestAssuredHelpers;
+import com.madhub.demo.helpers.PayloadBuilder;
+
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import resources.PayloadBuilder;
 
 public class TC5_PutServiceTest
 {

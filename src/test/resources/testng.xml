@@ -2,8 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 <listeners>
-        <listener class-name="resources.Listeners" />
-        <listener class-name="resources.ExtentReporterNG"></listener>
+        <listener class-name="com.madhub.demo.testng.Listeners" />
+        <listener class-name="com.madhub.demo.testng.ExtentReporterNG"></listener>
     </listeners>
   <test name="Test">
     <classes>

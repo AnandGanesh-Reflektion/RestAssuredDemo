@@ -1,4 +1,4 @@
-package resources;
+package com.madhub.demo.testng;
 
 import java.io.File;
 import java.util.Calendar;

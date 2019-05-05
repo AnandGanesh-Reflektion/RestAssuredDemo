@@ -1,7 +1,7 @@
 /*
- * Class: Config
+ * Class: payloadBuilder
  *
- * Created on May 1, 2019
+ * Created on May 4, 2019
  *
  * (c) Copyright Lam Research Corporation, unpublished work, created 2019
  * All use, disclosure, and/or reproduction of this material is prohibited
@@ -11,20 +11,17 @@
  * 4000 N. First Street
  * San Jose, CA
  */
-package constants;
+package com.madhub.demo.helpers;
 
-public class Config
+public class PayloadBuilder
 {
-    public static String PROTOCOL = "PROTOCOL";
 
-    public static String HOST = "HOST";
+    public int payload_id;
 
-    public static String GET = "GET";
+    public String payload_title;
 
-    public static String POST = "POST";
+    public String payload_body;
 
-    public static String PUT = "PUT";
-
-    public static String DELETE = "DELETE";
+    public int payload_userId;
 
 }

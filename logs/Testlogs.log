@@ -1,0 +1,6 @@
+10:54:26.037 [main] INFO  com.madhub.demo.testng.Listeners - Begin Test Case: [GetServiceUpperBoundaryCase]
+10:54:26.045 [main] INFO  com.madhub.demo.testng.Listeners - ======================================================
+10:54:26.212 [main] INFO  com.madhub.demo.core.ResponseValidators - [Validating Status Code]: Received Status Code = 404. Matches the Expected.
+10:54:26.213 [main] INFO  com.madhub.demo.testng.Listeners - ======================================================
+10:54:26.213 [main] INFO  com.madhub.demo.testng.Listeners - Passed Test Case: [GetServiceUpperBoundaryCase]
+10:54:26.213 [main] INFO  com.madhub.demo.testng.Listeners - ======================================================

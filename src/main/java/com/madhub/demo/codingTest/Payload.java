@@ -15,8 +15,8 @@ package com.madhub.demo.codingTest;
 
 import org.json.simple.JSONObject;
 
-import resources.POSTPayloadBuilder;
-import resources.PayloadBuilder;
+import com.madhub.demo.helpers.POSTPayloadBuilder;
+import com.madhub.demo.helpers.PayloadBuilder;
 
 public class Payload
 {

@@ -11,7 +11,7 @@
  * 4000 N. First Street
  * San Jose, CA
  */
-package resources;
+package com.madhub.demo.helpers;
 
 public class POSTPayloadBuilder
 {

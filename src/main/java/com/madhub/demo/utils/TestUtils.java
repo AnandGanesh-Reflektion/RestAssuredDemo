@@ -11,7 +11,7 @@
  * 4000 N. First Street
  * San Jose, CA
  */
-package utils;
+package com.madhub.demo.utils;
 
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;

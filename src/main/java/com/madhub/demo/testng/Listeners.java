@@ -11,7 +11,7 @@
  * 4000 N. First Street
  * San Jose, CA
  */
-package resources;
+package com.madhub.demo.testng;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

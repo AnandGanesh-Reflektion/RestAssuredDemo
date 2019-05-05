@@ -19,10 +19,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
-import constants.Config;
-import constants.Constants;
-import core.ResponseValidators;
-import core.RestAssuredHelpers;
+import com.madhub.demo.constants.Config;
+import com.madhub.demo.constants.Constants;
+import com.madhub.demo.core.ResponseValidators;
+import com.madhub.demo.core.RestAssuredHelpers;
+
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 

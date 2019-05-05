@@ -11,12 +11,12 @@
  * 4000 N. First Street
  * San Jose, CA
  */
-package utils;
+package com.madhub.demo.utils;
 
 import java.io.FileInputStream;
 import java.util.Properties;
 
-import constants.Constants;
+import com.madhub.demo.constants.Constants;
 
 public class PropertiesUtility
 {
