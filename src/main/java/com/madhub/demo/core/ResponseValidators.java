@@ -73,24 +73,36 @@ public class ResponseValidators
 
         if (!(expectedBody.id == receivedBody.id))
         {
+            ResponseValidators.log.error(
+                "[Validting Newly Created/Updated Resource]: \"id\" value is not as expected.  Value requested ="
+                        + expectedBody.id + ", but received=" + receivedBody.id);
             Assert.fail(
                 "[Validting Newly Created/Updated Resource]: \"id\" value is not as expected.  Value requested ="
                         + expectedBody.id + ", but received=" + receivedBody.id);
         }
         if (!(expectedBody.title == receivedBody.title))
         {
+            ResponseValidators.log.error(
+                "[Validting Newly Created/Updated Resource]: \"title\" value is not as expected.  Value requested ="
+                        + expectedBody.title + ", but received=" + receivedBody.title);
             Assert.fail(
                 "[Validting Newly Created/Updated Resource]: \"title\" value is not as expected.  Value requested ="
                         + expectedBody.title + ", but received=" + receivedBody.title);
         }
         if (!(expectedBody.body == receivedBody.body))
         {
+            ResponseValidators.log.error(
+                "[Validting Newly Created/Updated Resource]: \"body\" value is not as expected.  Value requested ="
+                        + expectedBody.body + ", but received=" + receivedBody.body);
             Assert.fail(
                 "[Validting Newly Created/Updated Resource]: \"body\" value is not as expected.  Value requested ="
                         + expectedBody.body + ", but received=" + receivedBody.body);
         }
         if (!(expectedBody.userId == receivedBody.userId))
         {
+            ResponseValidators.log.info(
+                "[Validting Newly Created/Updated Resource]: \"userId\" value is not as expected.  Value requested ="
+                        + expectedBody.userId + ", but received=" + receivedBody.userId);
             Assert.fail(
                 "[Validting Newly Created/Updated Resource]: \"userId\" value is not as expected.  Value requested ="
                         + expectedBody.userId + ", but received=" + receivedBody.userId);
@@ -146,7 +158,7 @@ public class ResponseValidators
                 }
                 catch (Throwable t)
                 {
-                    ResponseValidators.log.error("[Validating Json Schema]: Json Schema validation failed\n");
+                    ResponseValidators.log.error("[Validating Json Schema]: Json Schema validation failed.");
                     ResponseValidators.log.debug("Json schema validation error:\n" + t);
                     Assert.fail("[Validating Json Schema]: Json Schema validation failed. \n" + t.getMessage());
                 }
